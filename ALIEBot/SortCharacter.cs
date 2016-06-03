@@ -118,7 +118,7 @@ namespace ALIEBot
 
         public async Task SelectCharacter(IDialogContext context, IAwaitable<string> arg)
         {
-            Chain.Switch().PostToUser();
+            //Chain.Switch().PostToUser();
         }
     }
 }

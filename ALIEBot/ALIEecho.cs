@@ -73,53 +73,6 @@ namespace ALIEBot
                 context.Wait(MessageRecievedAsync);
          }
 
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    reply.Attachments.Add(new Attachment
-            //    {
-            //        Title = "Raven",
-            //        TitleLink = "http://the100.wikia.com/wiki/Raven_Reyes",
-            //        ThumbnailUrl = "http://vignette4.wikia.nocookie.net/thehundred/images/5/5e/The-100-season-2-cast-photos-raven.png/revision/latest?cb=20160401040926",
-            //        Text = "Bender Bending Rodríguez, commonly known as Bender, is a main character in the animated television series Futurama.",
-            //        FallbackText = "Bender: http://www.theoldrobots.com/images62/Bender-18.JPG",
-            //        Actions = actions
-            //    });
-            //}
-            //await context.PostAsync(reply);
-                //context.Wait(MessageReceivedAsync);
-
-                //var reply1 = new Message();
-
-                //reply.Attachments.Add(new Attachment()
-                //{
-                //    Title = "Bender",
-                //    TitleLink = "https://en.wikipedia.org/wiki/Bender_(Futurama)",
-                //    ThumbnailUrl = "http://vignette4.wikia.nocookie.net/thehundred/images/5/5e/The-100-season-2-cast-photos-raven.png/revision/latest?cb=20160401040926",
-                //    Text = "Bender Bending Rodríguez, commonly known as Bender, is a main character in the animated television series Futurama.",
-                //    FallbackText = "Bender: http://www.theoldrobots.com/images62/Bender-18.JPG"
-                //});
-                ////message.CreateReplyMessage("reply");
-                //await context.PostAsync(reply1);
-
-
-
-            
-            //if(message.Text == "reset")
-            //{
-            //    PromptDialog.Confirm(
-            //        context,
-            //        AfterResetAsync,
-            //        "Are you sure you want to reset the Code? If you do all the people in the City of Light will die.",
-            //        "Didn't get that...",
-            //        promptStyle: PromptStyle.None);
-            //else
-            //{
-            //    await context.PostAsync(string.Format("{0}: You said {1}", this.count++, message.Text));
-            //    context.Wait(MessageRecievedAsync);
-            //}
-
-        //}
-
         public async Task AfterResetAsync(IDialogContext context, IAwaitable<bool> argument)
         {
             var confirm = await argument;
@@ -135,12 +88,4 @@ namespace ALIEBot
         }
     }
 
-    //Who is in City of Light?
-    // Jaha, Abby, Kane, Emori, Jasper,
-
-    //Octavia, Clakre, Raven, Bellamy, Monty, Harper, 
-
-    //Sort [Character] // What house is [BLANK] in?
-
-    //
 }

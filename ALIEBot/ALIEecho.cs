@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using Microsoft.Bot.Builder.Dialogs;
 using System.Collections.Generic;
 
+
 namespace ALIEBot
 {
     [Serializable]

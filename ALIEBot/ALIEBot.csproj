@@ -124,12 +124,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LUIS_Integration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleAlarmDialog.cs" />
     <Compile Include="SortCharacter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Model\LUIS_Model.json" />
+    <Content Include="Model\ALIEbot.json" />
     <None Include="Properties\PublishProfiles\ALIEBot - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

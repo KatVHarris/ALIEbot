@@ -22,8 +22,10 @@ namespace ALIEBot
         {
             if (message.Type == "Message")
             {
-                return await Conversation.SendAsync(message, () => ComplexResponse.dialog);   
+                //return await Conversation.SendAsync(message, () => ComplexResponse.dialog);
                 //return await Conversation.SendAsync(message, () => new SortCharacter());
+                //return await Conversation.SendAsync(message, () => new LUIS_Integration());
+                return await Conversation.SendAsync(message, () => new Complex_LUIS_Integration());
 
             }
             else

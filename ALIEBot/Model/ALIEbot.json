@@ -1,0 +1,659 @@
+{
+  "luis_schema_version": "1.2.0",
+  "name": "ALIEbot",
+  "desc": "Intents used to interpret queries about information about the show the 100",
+  "culture": "en-us",
+  "intents": [
+    {
+      "Name": "None",
+      "Children": []
+    },
+    {
+      "Name": "LocateX",
+      "Children": []
+    },
+    {
+      "Name": "NameQuery",
+      "Children": []
+    },
+    {
+      "Name": "SortCharacter",
+      "Children": []
+    }
+  ],
+  "entities": [
+    {
+      "Name": "House",
+      "Children": []
+    },
+    {
+      "Name": "Character",
+      "Children": []
+    }
+  ],
+  "bing_entities": [],
+  "actions": [
+    {
+      "actionName": "NameQuery",
+      "intentName": "NameQuery",
+      "actionParameters": [
+        {
+          "parameterName": "XName",
+          "entityName": "Character",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "model_features": [
+    {
+      "name": "CharacterNames",
+      "mode": true,
+      "words": "clarke,raven,lexa,bellamy,abby,octavia,jasper,kane,monty,indra,murphy,jaha",
+      "activated": true
+    },
+    {
+      "name": "XQueryPhrases",
+      "mode": true,
+      "words": "tell me about,who is,info on,information on,information about,info about,query",
+      "activated": true
+    },
+    {
+      "name": "HPHouseNames",
+      "mode": true,
+      "words": "ravenclaw,gryffindor,slytherin,hufflepuff",
+      "activated": true
+    }
+  ],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "what house is raven in?",
+      "intent": "SortCharacter",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "sort raven",
+      "intent": "SortCharacter",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "driving directions",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "sort clarke",
+      "intent": "SortCharacter",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "is raven in ravenclaw?",
+      "intent": "SortCharacter",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 1,
+          "endPos": 1
+        },
+        {
+          "entity": "House",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "what house is clarke a part of?",
+      "intent": "SortCharacter",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "sort bellamy",
+      "intent": "SortCharacter",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "tell me about raven",
+      "intent": "NameQuery",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "sort abby",
+      "intent": "SortCharacter",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "sort kane",
+      "intent": "SortCharacter",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "sort monty",
+      "intent": "SortCharacter",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "which house is monty in?",
+      "intent": "SortCharacter",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "is monty in ravenclaw?",
+      "intent": "SortCharacter",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 1,
+          "endPos": 1
+        },
+        {
+          "entity": "House",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "is harry in dog?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "tell me all the people in ravenclaw",
+      "intent": "LocateX",
+      "entities": []
+    },
+    {
+      "text": "tell me everyone in ravenclaw",
+      "intent": "LocateX",
+      "entities": []
+    },
+    {
+      "text": "where is raven?",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "where is lexa?",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "where was clarke?",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "where was clarke last seen?",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "tell me where clarke is?",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "where is octavia",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "where is bellamy",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "where is jasper?",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "where is jaha",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "where is lexa",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "raven's last location?",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "where was raven's last location",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "where was clarke last seen",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "where was bellamy last seen",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "where was abby last seen",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "where is indra",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "where was indra last?",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "raven is where?",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "find raven?",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "find clarke",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "find bellamy",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "where can i find bellamy",
+      "intent": "LocateX",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "which house is raven in?",
+      "intent": "SortCharacter",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "which house is indra in?",
+      "intent": "SortCharacter",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "which house is harry in?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "which house is dumbdumb in?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "tell me about whoever",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "tell me about octavia",
+      "intent": "NameQuery",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "tell me about clarke",
+      "intent": "NameQuery",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "give me info on raven",
+      "intent": "NameQuery",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "which house is monty",
+      "intent": "SortCharacter",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "is monty a ravenclaw?",
+      "intent": "SortCharacter",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 1,
+          "endPos": 1
+        },
+        {
+          "entity": "House",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "is clarke a hufflepuff",
+      "intent": "SortCharacter",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 1,
+          "endPos": 1
+        },
+        {
+          "entity": "House",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "clarke",
+      "intent": "NameQuery",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "raven",
+      "intent": "NameQuery",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "bellamy",
+      "intent": "NameQuery",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "indra",
+      "intent": "NameQuery",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "abby",
+      "intent": "NameQuery",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "jaha",
+      "intent": "NameQuery",
+      "entities": [
+        {
+          "entity": "Character",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "tell me about kat",
+      "intent": "None",
+      "entities": []
+    }
+  ]
+}

@@ -120,6 +120,7 @@
     <Compile Include="ChainDialog.cs" />
     <Compile Include="ChainSort.cs" />
     <Compile Include="ComplexResponse.cs" />
+    <Compile Include="Complex_LUIS_Integration.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

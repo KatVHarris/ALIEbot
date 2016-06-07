@@ -68,22 +68,8 @@ namespace ALIEBot
                     await context.PostAsync(reply);
                     context.Wait(MessageRecievedAsync);
                     break;
-                case "joke":
-
-                    //reply.Text = string.Format("{0}: You said {1}", this.count++, message.Text);
-                    reply.Text = "Clarke is... problematic. Her friends and family are her weakness. She is not as clever as Raven though she is resrouceful. As leader of the 100 having her join the City of Light will make it easier to obtain the second half of my code.";
-                    reply.Attachments = new List<Attachment>();
-                    reply.Attachments.Add(new Attachment
-                    {
-                        Title = "Name: Clarke Griffin - aka WanHeda - the commander of Death.",
-                        ContentType = "image/jpeg",
-                        ContentUrl = $"http://vignette4.wikia.nocookie.net/thehundred/images/6/68/The-100-season-2-cast-photos-clarke.png/revision/latest?cb=20160401042738",
-                        Text = "Status: Not in City of Light \n >Age: 19 \n  >Living Family: Abby Griffin \n "
-                        //Actions = actions
-
-                    });
-                    await context.PostAsync(reply);
-                    context.Wait(MessageRecievedAsync);
+                case "sort":
+                    SortCharacterDialog();
                     break;
                 case "join":
                     PromptDialog.Confirm(
@@ -116,9 +102,5 @@ namespace ALIEBot
             context.Wait(MessageRecievedAsync);
         }
 
-        public async Task SelectCharacter(IDialogContext context, IAwaitable<string> arg)
-        {
-            //Chain.Switch().PostToUser();
-        }
     }
 }

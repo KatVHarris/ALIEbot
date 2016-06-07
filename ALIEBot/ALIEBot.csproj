@@ -115,7 +115,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ALIEecho.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="ChainDialog.cs" />
     <Compile Include="ChainSort.cs" />
@@ -128,6 +127,7 @@
     <Compile Include="LUIS_Integration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleAlarmDialog.cs" />
+    <Compile Include="SimpleResponse.cs" />
     <Compile Include="SortCharacter.cs" />
   </ItemGroup>
   <ItemGroup>

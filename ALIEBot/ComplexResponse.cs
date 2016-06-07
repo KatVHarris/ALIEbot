@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * The SimpleResonse Class demonstrates messageRecieved Async messages, between user and bot. 
+ * The class does not use any of the regex identifiers for text. 
+ * The class does not use any of the Chain specific functions from Microsoft.Bot.Builder.Chain library
+*/
+
+using System;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -12,12 +18,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace ALIEBot
-{
-    public enum Characters
-    {
-        Raven, Clarke, Octavia, Bellamy, Jasper, Monty,
-        Abby, Kane, Lexa, Jaha
-    };    
+{   
 
     public class ComplexResponse
     {

@@ -1,7 +1,7 @@
 ﻿/*
- * The SimpleResonse Class demonstrates messageRecieved Async messages, between user and bot. 
- * The class does not use any of the regex identifiers for text. 
- * The class does not use any of the Chain specific functions from Microsoft.Bot.Builder.Chain library
+ * The ComplexDialogChain Class demonstrates more of the Chian functionality going into Chained responses. 
+ * The class also implements regex to identify user input. 
+ * The Class does not use any of the Bot Framework Formflow Specific Functions. 
 */
 
 using System;
@@ -20,7 +20,7 @@ using System.Text.RegularExpressions;
 namespace ALIEBot
 {   
 
-    public class ComplexResponse
+    public class ComplexDialogChain
     {
         
         public static readonly IDialog<string> dialog = Chain.PostToChain()
@@ -108,10 +108,6 @@ namespace ALIEBot
         }),
         new DefaultCase<string, IDialog<string>>((context, txt) =>
         {
-            //int count;
-            //context.UserData.TryGetValue("count", out count);
-            //context.UserData.SetValue("count", ++count);
-            //string reply = string.Format("{0}: You said {1}", count, txt);
             string reply = "Tell me who you would like to know about. Or if you would like to join the City of Light."; 
             return Chain.Return(reply);
         }))

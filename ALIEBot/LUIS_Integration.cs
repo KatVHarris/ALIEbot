@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * The LUIS_Integration Class uses Microsoft Bot Framework to create dialogs that interact with LUIS
+ * The LUIS model in place is an open API endpoint that the Bot can reach. 
+ * The model in use can be found in the Model folder  
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;

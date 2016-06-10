@@ -19,8 +19,8 @@ Uncouple the Character Attchment cards from the LUIS_Integration Class.
 Add more Character Cards
 
 ### Adding Character Bot.Builder Attachment Cards
-```csharp
 The format for adding Character Cards is as follows: 
+```csharp
     case "CHARACTER_NAME":
         reply.Text = "DESCRIPTION OF CHARACTER FROM ALIE'S POV. INCULDE STATUS, AGE, LIVING FAMILY";
         // EXAMPLE: Clarke is strong and determined. Her friends and family are her weakness. She is not as clever as Raven though she is resrouceful.";
@@ -34,6 +34,8 @@ The format for adding Character Cards is as follows:
         });
         break;
 ```     
+Syntax for reply.Text should follow the Microsoft Bot Frameowrk Markdown text. 
+Examples of the text for Facebook and the Web are here: http://bit.ly/botMarkdown
 
 ## Coming Features:
 Sorting Characters

@@ -68,14 +68,25 @@ namespace ALIEBot
                                 reply.Attachments = new List<Attachment>();
                                 reply.Attachments.Add(new Attachment
                                 {
-                                    Title = "Name: Clarke Griffin - aka WanHeda - the commander of Death.",
+                                    Title = "Name: Clarke Griffin - aka WanHeda - the Commander of Death.",
                                     ContentType = "image/jpeg",
                                     ContentUrl = $"http://vignette4.wikia.nocookie.net/thehundred/images/6/68/The-100-season-2-cast-photos-clarke.png/revision/latest?cb=20160401042738",
                                     Text = "Status: Not in City of Light \n >Age: 19 \n  >Living Family: Abby Griffin \n "
                                 });
                                 break;
+                            case "lexa":
+                                reply.Text = "Lexa was the commander of the grounders, an avid warrior, who sought peace with the people from the Ark. She was the host for part 2 of my code until her conciousness was integrated into the second A.I.";
+                                reply.Attachments = new List<Attachment>();
+                                reply.Attachments.Add(new Attachment
+                                {
+                                    Title = "Name: Lexa kom Trikru- aka Heda - the Commander.",
+                                    ContentType = "image/jpeg",
+                                    ContentUrl = $"http://vignette1.wikia.nocookie.net/thehundred/images/8/80/Lexa1.png/revision/latest?cb=20160129174450",
+                                    Text = "Status: In the Flame \n >Age: ~20 \n  >Living Family: None \n "
+                                });
+                                break;
                             default:
-                                reply.Text = ("Tell me who you would like to know about.");
+                                reply.Text = ("I have no information about that person. Tell me who you would like to know about. Or if you would like to join the City of Light.");
 
                                 break;
                         }

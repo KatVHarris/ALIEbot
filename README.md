@@ -4,8 +4,9 @@
 Katherine "Kat" Harris - Microsoft Technical Evangelist (TE) - Twitter: @KatVHarris
 
 ## Interact and Test
-Facebook: 
-Web:
+Web: http://aliebot.azurewebsites.net/
+
+Facebook: https://www.facebook.com/ALIE-Bot-1179365098748917/
 
 ## Summary
 ALIEbot was created using the Microsoft Bot Framework. It uses the Bot Connector (C#) for integration to the Web, Facebook and Slack. Each class has a different sample of how to implement messaging for your Bot. The Natural Language processing is done through Microsoft's LUIS Serivce: https://www.luis.ai/

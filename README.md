@@ -19,6 +19,7 @@ Uncouple the Character Attchment cards from the LUIS_Integration Class.
 Add more Character Cards
 
 ### Adding Character Bot.Builder Attachment Cards
+```csharp
 The format for adding Character Cards is as follows: 
     case "CHARACTER_NAME":
         reply.Text = "DESCRIPTION OF CHARACTER FROM ALIE'S POV. INCULDE STATUS, AGE, LIVING FAMILY";
@@ -32,7 +33,7 @@ The format for adding Character Cards is as follows:
             Text = "COL STATUS/ AGE / FAMILY /" //EXAMPLE:"Status: Not in City of Light \n >Age: 19 \n  >Living Family: Abby Griffin \n "
         });
         break;
-        
+```     
 
 ## Coming Features:
 Sorting Characters

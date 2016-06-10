@@ -1,8 +1,11 @@
 # ALIEbot
-Bot using Microsoft Bot Framework with the Bot Connector. 
 
-Each class has a different demo of how to interact with bots
+### Author
+Katherine "Kat" Harris - Microsoft Technical Evangelist (TE) - Twitter: @KatVHarris
 
-Natural Language understanding is done through Microsoft's LUIS
+### Summary
+ALIEbot was created using the Microsoft Bot Framework. It uses the Bot Connector for integration to the Web, Facebook and Slack. Each class has a different sample of how to implement messaging for your Bot. The Natural Language processing is done through Microsoft's LUIS Serivce: https://www.luis.ai/
+
+The purpose of this project is to have detailed samples for people to learn about the Bot Framework. And eventually expand the demo into the 3D gaming engine, Unity3D. 
 
 The post for how I got everything working will be up at: https://KatVharris.azurewebsites.net

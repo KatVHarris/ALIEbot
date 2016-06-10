@@ -8,4 +8,4 @@ ALIEbot was created using the Microsoft Bot Framework. It uses the Bot Connector
 
 The purpose of this project is to have detailed samples for people to learn about the Bot Framework. And eventually expand the demo into the 3D gaming engine, Unity3D. 
 
-The post for how I got everything working will be up at: https://KatVharris.azurewebsites.net
+The post for how I got everything working will be up at: http://katvharris.azurewebsites.net/blog/microsoft-bot-framework/

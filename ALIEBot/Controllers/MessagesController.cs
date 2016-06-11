@@ -22,6 +22,11 @@ namespace ALIEBot
         {
             if (message.Type == "Message")
             {
+                // ConnectorClient botConnector = new BotConnector();
+                // ... use message.CreateReplyMessage() to create a message, or
+                // ... create a new message and set From, To, Text 
+                // await botConnector.Messages.SendMessageAsync(message);
+
                 // Simplest of responses
                 //return message.CreateReplyMessage($"You said:{message.Text}");
 
@@ -52,12 +57,21 @@ namespace ALIEBot
             }
             else if (message.Type == "BotAddedToConversation")
             {
+                var connector = new ConnectorClient();
+                //ConnectorClient botConnector = new BotConnector();
+                Message hello = new Message();
+                hello.Text = "Bot Added";
+                return hello;
             }
             else if (message.Type == "BotRemovedFromConversation")
             {
             }
             else if (message.Type == "UserAddedToConversation")
             {
+                var connector = new ConnectorClient();
+                Message reply =new Message();
+                reply.Text = "User ADDED";
+                return reply;
             }
             else if (message.Type == "UserRemovedFromConversation")
             {

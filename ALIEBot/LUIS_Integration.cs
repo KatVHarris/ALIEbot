@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Threading.Tasks;
+using System.Text;
 
 //Add dependencies 
 using Microsoft.Bot.Builder.Luis;
@@ -26,6 +27,7 @@ namespace ALIEBot
     [Serializable]
     public class LUIS_Integration : LuisDialog<Object>
     {
+        List<string> Greetings = new List<string>();
         //Generate Method for every Intent in LUIS model
         [LuisIntent("")]
         public async Task None(IDialogContext context, LuisResult result)
@@ -38,12 +40,29 @@ namespace ALIEBot
             context.Wait(MessageReceived);
         }
 
+        [LuisIntent("Greeting")]
+        public async Task Greeting(IDialogContext context, LuisResult result)
+        {
+            Random random = new Random();
+            random.Next(0, 5);
+            //None is the default response
+            string message = "Hello there. Is it not a the perfect time to join the City of Light.";
+            string message = "Hello, I'm A.L.I.E. I'm here to help.";
+            string message = "Hello there. Is it not a the perfect time to join the City of Light.";
+            string message = "Hello there. Is it not a the perfect time to join the City of Light.";
+            //Can also respond with the following if you don't have a set default message- $"Sorry I did not understand: " + string.Join(", ", result.Intents.Select(i => i.Intent));
+
+            await context.PostAsync(message);
+            context.Wait(MessageReceived);
+        }
+
         [LuisIntent("NameQuery")]
         public async Task GetInformationOnX(IDialogContext context, LuisResult result)
         {
             var entitiesArray = result.Entities;
-
+            
             var reply = context.MakeMessage();
+            
             if(entitiesArray.Count >= 1)
             {
                 foreach (var entityItem in result.Entities)
@@ -53,40 +72,55 @@ namespace ALIEBot
                         switch (entityItem.Entity)
                         {
                             case "raven":
-                                reply.Text = "Out of the Arkers Raven has the most powerful mind of the group. Her exit from the City of Light was a loss to be sure. ";
+                                reply.Text = "Out of the Arkers Raven has the most powerful mind of the group. Her exit from the City of Light was a loss to be sure. "+
+                                    "* Age: 19 \n" +
+                                    "* Living Family: Abby Griffin \n" +
+                                    "* Skills: Genius, Mechanic, Electronics Expert. \n" +
+                                    "* Kills: -- \n";
                                 reply.Attachments = new List<Attachment>();
                                 reply.Attachments.Add(new Attachment
                                 {
                                     Title = "Name: Raven Reyes",
                                     ContentType = "image/jpeg",
                                     ContentUrl = $"http://vignette4.wikia.nocookie.net/thehundred/images/5/5e/The-100-season-2-cast-photos-raven.png/revision/latest?cb=20160401040926",
-                                    Text = "Status: Exited City of Light \n >Age: 19 \n  >Living Family: None \n "
+                                    Text = "Status: Exited City of Light \n\n Age: 19 \n\n * Living Family: None \n "
                                 });
                                 break;
                             case "clarke":
-                                reply.Text = "Clarke is strong and determined. Her friends and family are her weakness. She is not as clever as Raven though she is resrouceful.";
+                                reply.Text = "Clarke is strong and determined. Her friends and family are her weakness. She is not as clever as Raven, though she is resrouceful. \n\n " +
+                                    "* Age: 18 \n\n " +
+                                    "* Living Family: Abby Griffin \n\n" +
+                                    "* Kills: 900+ \n\n" +
+                                    "* Skills: Politics, Medical Knowledge";
+;
                                 reply.Attachments = new List<Attachment>();
                                 reply.Attachments.Add(new Attachment
                                 {
-                                    Title = "Name: Clarke Griffin - aka WanHeda - the Commander of Death.",
+                                    Title = "Name: Clarke Griffin - aka Wanheda - the Commander of Death.",
                                     ContentType = "image/jpeg",
                                     ContentUrl = $"http://vignette4.wikia.nocookie.net/thehundred/images/6/68/The-100-season-2-cast-photos-clarke.png/revision/latest?cb=20160401042738",
-                                    Text = "Status: Not in City of Light \n >Age: 19 \n  >Living Family: Abby Griffin \n "
+                                    Text = "Clarke Griffin/Princess/Wanheda"
                                 });
                                 break;
                             case "lexa":
-                                reply.Text = "Lexa was the commander of the grounders, an avid warrior, who sought peace with the people from the Ark. She was the host for part 2 of my code until her conciousness was integrated into the second A.I.";
+                                reply.Text = "Lexa was the commander of the grounders, an avid warrior, who sought peace with the people from the Ark. She was the host for part 2 of my code until her conciousness was integrated into the second A.I. \n\n " +
+                                    "* Age: ~20 \n" +
+                                    "* Living Family: unkown \n" +
+                                    "* Skills: Politics, Sword Fighting, Knife Throwing \n" +
+                                    "* Kills: 900+ \n";
                                 reply.Attachments = new List<Attachment>();
                                 reply.Attachments.Add(new Attachment
                                 {
                                     Title = "Name: Lexa kom Trikru- aka Heda - the Commander.",
                                     ContentType = "image/jpeg",
                                     ContentUrl = $"http://vignette1.wikia.nocookie.net/thehundred/images/8/80/Lexa1.png/revision/latest?cb=20160129174450",
-                                    Text = "Status: In the Flame \n >Age: ~20 \n  >Living Family: None \n "
+                                    Text = ""
                                 });
                                 break;
                             default:
-                                reply.Text = ("I have no information about that person. Tell me who you would like to know about. Or if you would like to join the City of Light.");
+                                reply.Text = ("I have no information about that person. " +
+                                    "Tell me who you would like to know about. " + 
+                                    "Or if you would like to join the City of Light.");
 
                                 break;
                         }

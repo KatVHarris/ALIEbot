@@ -27,7 +27,11 @@ namespace ALIEBot
     [Serializable]
     public class LUIS_Integration : LuisDialog<Object>
     {
-        List<string> Greetings = new List<string>();
+
+        string[] Greetings = new string[]{ "Hello there. Is it not a the perfect time to join the City of Light.",
+            "Hello, I'm A.L.I.E. I'm here to help.",
+            "Greetings, I am A.L.I.E. the City of Light will take away all your pain.",
+            "Greetings", "Hello", "Hello, how can I help?" };
         //Generate Method for every Intent in LUIS model
         [LuisIntent("")]
         public async Task None(IDialogContext context, LuisResult result)
@@ -44,12 +48,10 @@ namespace ALIEBot
         public async Task Greeting(IDialogContext context, LuisResult result)
         {
             Random random = new Random();
-            random.Next(0, 5);
+            int x = random.Next(0, 5);
+            string message = Greetings[x];
             //None is the default response
-            string message = "Hello there. Is it not a the perfect time to join the City of Light.";
-            string message = "Hello, I'm A.L.I.E. I'm here to help.";
-            string message = "Hello there. Is it not a the perfect time to join the City of Light.";
-            string message = "Hello there. Is it not a the perfect time to join the City of Light.";
+            //string message = "Hello there. Is it not a the perfect time to join the City of Light.";
             //Can also respond with the following if you don't have a set default message- $"Sorry I did not understand: " + string.Join(", ", result.Intents.Select(i => i.Intent));
 
             await context.PostAsync(message);

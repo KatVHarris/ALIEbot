@@ -15,9 +15,28 @@ The purpose of this project is to have detailed samples for people to learn abou
 
 The post for how I got everything working will be up at: http://katvharris.azurewebsites.net/blog/microsoft-bot-framework/
 
-## Coding Todo's
-Uncouple the Character Attchment cards from the LUIS_Integration Class. 
-Add more Character Cards
+## Commands // Responses // LUIS intents
+#### None
+Catch all, generic response that is the default response for unknown intents that are returned in LUIS. 
+
+#### Help
+Gives hints as to what the user can do with the Bot.
+
+#### CoreCommand
+States A.L.I.E.'s core command.
+
+#### JoinCOL
+Creates a ConfirmationDialog for the user to respond with affirmitive/negitive confirmation to "join" the city of light.
+
+#### NameQuery
+Queries information on X, where X is the name of the Person, Place, or Thing, in the world of the 100. 
+
+#### Greeting
+Responds to users greeting with generic greetings.
+
+## Action Items
+* Uncouple the Character Attchment cards from the LUIS_Integration Class. 
+* Add more Character Cards
 
 ### Adding Character Bot.Builder Attachment Cards
 The format for adding Character Cards is as follows: 

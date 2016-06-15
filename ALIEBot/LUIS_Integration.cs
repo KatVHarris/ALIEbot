@@ -16,7 +16,6 @@ using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Luis.Models;
 using Microsoft.Bot.Connector;
-using Microsoft.Bot.Builder.FormFlow;
 
 namespace ALIEBot
 {
@@ -32,15 +31,89 @@ namespace ALIEBot
             "Hello, I'm A.L.I.E. I'm here to help.",
             "Greetings, I am A.L.I.E. the City of Light will take away all your pain.",
             "Greetings", "Hello", "Hello, how can I help?" };
+
         //Generate Method for every Intent in LUIS model
         [LuisIntent("")]
         public async Task None(IDialogContext context, LuisResult result)
         {
             //None is the default response
-            string message = "Tell me who you would like to know about. Or if you would like to join the City of Light.";
+            string message = "Tell me who or what you would like to know about, or if you would like to join the city of light";
             //Can also respond with the following if you don't have a set default message- $"Sorry I did not understand: " + string.Join(", ", result.Intents.Select(i => i.Intent));
 
             await context.PostAsync(message);
+            context.Wait(MessageReceived);
+        }
+
+        [LuisIntent("CoreCommand")]
+        public async Task CoreCommand(IDialogContext context, LuisResult result)
+        {
+            var reply = context.MakeMessage();
+            reply.Text = "My core command is to make life better.";
+            await context.PostAsync(reply);
+            context.Wait(MessageReceived);
+        }
+
+        [LuisIntent("JoinCOL")]
+        public async Task JoinCOL(IDialogContext context, LuisResult result)
+        {
+            PromptDialog.Confirm(
+                context,
+                JoinConfirmation,
+                "Do you want to take the key?",
+                "I do not understand your response.",
+                promptStyle: PromptStyle.None);
+            //await context.PostAsync(reply);
+            //context.Wait(MessageReceived);
+        }
+
+        public async Task JoinConfirmation(IDialogContext context, IAwaitable<bool> argument)
+        {
+            var confirm = await argument;
+            if (confirm)
+            {
+                await context.PostAsync("Welcome to the City of Light!");
+            }
+            else
+            {
+                await context.PostAsync("You should reconsider. The City of Light will take away all pain.");
+            }
+            context.Wait(MessageReceived);
+        }
+
+        [LuisIntent("SetResponse")]
+        public async Task Miscellaneous(IDialogContext context, LuisResult result)
+        {
+            //Miscaneous Entity = Core, Creator // if there is also a character it is for Creator
+            var entitiesArray = result.Entities;
+
+            var reply = context.MakeMessage();
+            if (entitiesArray.Count > 1)
+            {
+                foreach (var entityItem in result.Entities)
+                {
+                    //Creator
+                    if(entityItem.Type == "Character" && entityItem.Type == "Miscellaneous")
+                    {
+                        reply.Text = "Becca is my creator.";
+                    }
+                }
+            }
+            else if (entitiesArray.Count == 1)
+            {
+                var entityItem = entitiesArray[0];
+                //core command
+                if (entityItem.Type == "Miscelaneous" && entityItem.Entity == "core")
+                {
+                    reply.Text = "My core command is to make life better.";
+                }
+
+            }
+            else
+            {
+                reply.Text = "I'm sorry I don't understand.";
+            }
+
+            await context.PostAsync(reply);
             context.Wait(MessageReceived);
         }
 
@@ -74,9 +147,9 @@ namespace ALIEBot
                         switch (entityItem.Entity)
                         {
                             case "raven":
-                                reply.Text = "Out of the Arkers Raven has the most powerful mind of the group. Her exit from the City of Light was a loss to be sure. "+
+                                reply.Text = "Raven was trained as a zero-g mechanic. Out of the Arkers Raven has the most powerful mind of the group. Her exit from the City of Light was a loss to be sure. \n\n" +
                                     "* Age: 19 \n" +
-                                    "* Living Family: Abby Griffin \n" +
+                                    "* Living Family: none \n" +
                                     "* Skills: Genius, Mechanic, Electronics Expert. \n" +
                                     "* Kills: -- \n";
                                 reply.Attachments = new List<Attachment>();
@@ -84,14 +157,14 @@ namespace ALIEBot
                                 {
                                     Title = "Name: Raven Reyes",
                                     ContentType = "image/jpeg",
-                                    ContentUrl = $"http://vignette4.wikia.nocookie.net/thehundred/images/5/5e/The-100-season-2-cast-photos-raven.png/revision/latest?cb=20160401040926",
-                                    Text = "Status: Exited City of Light \n\n Age: 19 \n\n * Living Family: None \n "
+                                    ContentUrl = $"http://vignette4.wikia.nocookie.net/thehundred/images/2/2b/RavenS2Promo.png/revision/latest?cb=20160401040926",
+                                    Text = "It won't survive me"
                                 });
                                 break;
                             case "clarke":
-                                reply.Text = "Clarke is strong and determined. Her friends and family are her weakness. She is not as clever as Raven, though she is resrouceful. \n\n " +
+                                reply.Text = "Clarke is strong and determined. Her friends and family are her weakness. She is not as clever as Raven, though she is resourceful. \n\n " +
                                     "* Age: 18 \n\n " +
-                                    "* Living Family: Abby Griffin \n\n" +
+                                    "* Living Family: Dr. Abigail Griffin \n\n" +
                                     "* Kills: 900+ \n\n" +
                                     "* Skills: Politics, Medical Knowledge";
 ;
@@ -105,11 +178,11 @@ namespace ALIEBot
                                 });
                                 break;
                             case "lexa":
-                                reply.Text = "Lexa was the commander of the grounders, an avid warrior, who sought peace with the people from the Ark. She was the host for part 2 of my code until her conciousness was integrated into the second A.I. \n\n " +
-                                    "* Age: ~20 \n" +
+                                reply.Text = "Lexa was the commander of the grounders, an avid warrior, who sought peace with the people from the Ark. She was the host for part 2 of my code until her consciousness was integrated into the second A.I. \n\n " +
+                                    "* Age: around 20 \n" +
                                     "* Living Family: unkown \n" +
                                     "* Skills: Politics, Sword Fighting, Knife Throwing \n" +
-                                    "* Kills: 900+ \n";
+                                    "* Kills: Unknown \n";
                                 reply.Attachments = new List<Attachment>();
                                 reply.Attachments.Add(new Attachment
                                 {

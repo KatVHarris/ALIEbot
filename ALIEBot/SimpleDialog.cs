@@ -84,7 +84,7 @@ namespace ALIEBot
             }
             else
             {
-                await context.PostAsync("Reset aorted. Thank you.");
+                await context.PostAsync("Reset aborted. Thank you.");
             }
             context.Wait(MessageRecievedAsync);
         }

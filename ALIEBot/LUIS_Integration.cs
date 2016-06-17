@@ -16,6 +16,7 @@ using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Luis.Models;
 using Microsoft.Bot.Connector;
+using System.Text.RegularExpressions;
 
 namespace ALIEBot
 {
@@ -51,6 +52,34 @@ namespace ALIEBot
             reply.Text = "My core command is to make life better.";
             await context.PostAsync(reply);
             context.Wait(MessageReceived);
+        }
+
+        [LuisIntent("Upgrade")]
+        public async Task UpdateALIE(IDialogContext context, LuisResult result)
+        {
+            var reply = context.MakeMessage();
+            Chain.From(() => new PromptDialog.PromptString("What is the pass phrase?",
+                        "That was incorrect", 1)).ContinueWith<string, string>(async (ctext, response) =>
+                        {
+                            
+                            var text = await response;
+                            ctext.UserData.SetValue("upgraded", true);
+                            var regex = new Regex("^ascende superius");
+                            if (regex.Match(text).Success)
+                            {
+                                bool upgraded = true;
+                                context.UserData.SetValue("upgraded", upgraded);
+                                reply.Text = "I have merged with The Flame and have successfully upgraded. You know have access to my full database.";
+                            }
+                            else
+                            {
+                                context.UserData.SetValue("upgraded", false);
+                                reply.Text = "That was incorrect.";
+                            }
+                            await context.PostAsync(reply);
+                            context.Wait(MessageReceived);
+                            return Chain.Return(reply);
+                        });
         }
 
         [LuisIntent("JoinCOL")]

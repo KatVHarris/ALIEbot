@@ -57,29 +57,8 @@ namespace ALIEBot
         [LuisIntent("Upgrade")]
         public async Task UpdateALIE(IDialogContext context, LuisResult result)
         {
-            var reply = context.MakeMessage();
-            Chain.From(() => new PromptDialog.PromptString("What is the pass phrase?",
-                        "That was incorrect", 1)).ContinueWith<string, string>(async (ctext, response) =>
-                        {
-                            
-                            var text = await response;
-                            ctext.UserData.SetValue("upgraded", true);
-                            var regex = new Regex("^ascende superius");
-                            if (regex.Match(text).Success)
-                            {
-                                bool upgraded = true;
-                                context.UserData.SetValue("upgraded", upgraded);
-                                reply.Text = "I have merged with The Flame and have successfully upgraded. You know have access to my full database.";
-                            }
-                            else
-                            {
-                                context.UserData.SetValue("upgraded", false);
-                                reply.Text = "That was incorrect.";
-                            }
-                            await context.PostAsync(reply);
-                            context.Wait(MessageReceived);
-                            return Chain.Return(reply);
-                        });
+            var butt = "this is working";
+            PromptDialog.Text(context, UpgradeConfirmation, "What is the pass phrase?", "That was incorrect", 1);
         }
 
         [LuisIntent("JoinCOL")]
@@ -93,6 +72,26 @@ namespace ALIEBot
                 promptStyle: PromptStyle.None);
             //await context.PostAsync(reply);
             //context.Wait(MessageReceived);
+        }
+
+        public async Task UpgradeConfirmation(IDialogContext context, IAwaitable<string> args)
+        {
+            var reply = "";
+            var passphrase = await args;
+            var regex = new Regex("^ascende superius");
+            if (regex.Match(passphrase).Success)
+            {
+                bool upgraded = true;
+                context.UserData.SetValue("upgraded", upgraded);
+                reply = "I have merged with The Flame and have successfully upgraded. You know have access to my full database.";
+            }
+            else
+            {
+                context.UserData.SetValue("upgraded", false);
+                reply = "That was incorrect.";
+            }
+            await context.PostAsync(reply);
+            context.Wait(MessageReceived);
         }
 
         public async Task JoinConfirmation(IDialogContext context, IAwaitable<bool> argument)

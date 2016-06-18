@@ -6,7 +6,7 @@ Katherine "Kat" Harris - Microsoft Technical Evangelist (TE) - Twitter: @KatVHar
 ## Interact and Test
 Web: http://aliebot.azurewebsites.net/
 
-Facebook: https://www.facebook.com/ALIE-Bot-1179365098748917/
+Facebook: Link no longer working
 
 ## Summary
 ALIEbot was created using the Microsoft Bot Framework. It uses the Bot Connector (C#) for integration to the Web, Facebook and Slack. Each class has a different sample of how to implement messaging for your Bot. The Natural Language processing is done through Microsoft's LUIS Serivce: https://www.luis.ai/
@@ -35,6 +35,7 @@ Queries information on X, where X is the name of the Person, Place, or Thing, in
 Responds to users greeting with generic greetings.
 
 ## Action Items
+* Restablish FB connection
 * Uncouple the Character Attchment cards from the LUIS_Integration Class. 
 * Add more Character Cards
 

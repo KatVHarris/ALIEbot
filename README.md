@@ -34,6 +34,9 @@ Queries information on X, where X is the name of the Person, Place, or Thing, in
 #### Greeting
 Responds to users greeting with generic greetings.
 
+#### Upgrade
+Gives the user acess to all the hidden commands for querying data about the show instead of just elements inside the show. 
+
 ## Action Items
 * Restablish FB connection
 * Uncouple the Character Attchment cards from the LUIS_Integration Class. 

@@ -57,8 +57,28 @@ namespace ALIEBot
         [LuisIntent("Upgrade")]
         public async Task UpdateALIE(IDialogContext context, LuisResult result)
         {
-            var butt = "this is working";
             PromptDialog.Text(context, UpgradeConfirmation, "What is the pass phrase?", "That was incorrect", 1);
+        }
+
+
+        public async Task UpgradeConfirmation(IDialogContext context, IAwaitable<string> args)
+        {
+            var reply = "";
+            var passphrase = await args;
+            var regex = new Regex("^ascende superius");
+            if (regex.Match(passphrase).Success)
+            {
+                bool upgraded = true;
+                context.UserData.SetValue("upgraded", upgraded);
+                reply = "I have merged with The Flame and have successfully upgraded. You now have access to my full database.";
+            }
+            else
+            {
+                context.UserData.SetValue("upgraded", false);
+                reply = "That was incorrect.";
+            }
+            await context.PostAsync(reply);
+            context.Wait(MessageReceived);
         }
 
         [LuisIntent("JoinCOL")]
@@ -74,25 +94,6 @@ namespace ALIEBot
             //context.Wait(MessageReceived);
         }
 
-        public async Task UpgradeConfirmation(IDialogContext context, IAwaitable<string> args)
-        {
-            var reply = "";
-            var passphrase = await args;
-            var regex = new Regex("^ascende superius");
-            if (regex.Match(passphrase).Success)
-            {
-                bool upgraded = true;
-                context.UserData.SetValue("upgraded", upgraded);
-                reply = "I have merged with The Flame and have successfully upgraded. You know have access to my full database.";
-            }
-            else
-            {
-                context.UserData.SetValue("upgraded", false);
-                reply = "That was incorrect.";
-            }
-            await context.PostAsync(reply);
-            context.Wait(MessageReceived);
-        }
 
         public async Task JoinConfirmation(IDialogContext context, IAwaitable<bool> argument)
         {
@@ -218,6 +219,36 @@ namespace ALIEBot
                                     ContentType = "image/jpeg",
                                     ContentUrl = $"http://vignette1.wikia.nocookie.net/thehundred/images/8/80/Lexa1.png/revision/latest?cb=20160129174450",
                                     Text = ""
+                                });
+                                break;
+                            case "jaha":
+                                reply.Text = "Theloneous Jaha. Former Chancellor of the Ark. Instrumental in gainning follwers for the City of Light. \n\n" +
+                                    "* Age: 55 \n" +
+                                    "* Living Family: none \n" +
+                                    "* Skills: Leadership, Manipulation \n" +
+                                    "* Kills: 201 \n";
+                                reply.Attachments = new List<Attachment>();
+                                reply.Attachments.Add(new Attachment
+                                {
+                                    Title = "Name: Theloneous Jaha",
+                                    ContentType = "image/jpeg",
+                                    ContentUrl = $"",
+                                    Text = "Take this leap of faith with me."
+                                });
+                                break;
+                            case "kane":
+                                reply.Text = "Marcus Kane. Kane, former head of security on the Ark and temporary Chancellor. Kane is strategic was trained as a zero-g mechanic. Out of the Arkers Raven has the most powerful mind of the group. Her exit from the City of Light was a loss to be sure. \n\n" +
+                                    "* Age: 19 \n" +
+                                    "* Living Family: none \n" +
+                                    "* Skills: Genius, Mechanic, Electronics Expert. \n" +
+                                    "* Kills: -- \n";
+                                reply.Attachments = new List<Attachment>();
+                                reply.Attachments.Add(new Attachment
+                                {
+                                    Title = "Name: Raven Reyes",
+                                    ContentType = "image/jpeg",
+                                    ContentUrl = $"http://vignette4.wikia.nocookie.net/thehundred/images/2/2b/RavenS2Promo.png/revision/latest?cb=20160401040926",
+                                    Text = "It won't survive me"
                                 });
                                 break;
                             default:

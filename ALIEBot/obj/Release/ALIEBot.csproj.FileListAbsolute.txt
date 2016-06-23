@@ -32,3 +32,37 @@ c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\fr\M
 c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\ja\Microsoft.Bot.Builder.resources.dll
 c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\ru\Microsoft.Bot.Builder.resources.dll
 c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\ALIEBot.dll.config
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\ALIEBot.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\ALIEBot.pdb
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\Autofac.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\Chronic.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\Microsoft.Bot.Builder.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\Microsoft.Bot.Connector.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\Microsoft.Rest.ClientRuntime.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\Newtonsoft.Json.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\Newtonsoft.Json.Schema.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\System.Net.Http.Formatting.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\System.Web.Http.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\System.Web.Http.WebHost.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\Autofac.xml
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\Microsoft.Bot.Builder.xml
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\Microsoft.Rest.ClientRuntime.xml
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\Newtonsoft.Json.xml
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\Newtonsoft.Json.Schema.xml
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\System.Net.Http.Formatting.xml
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\System.Web.Http.xml
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\System.Web.Http.WebHost.xml
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\ar\Microsoft.Bot.Builder.resources.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\en\Microsoft.Bot.Builder.resources.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\es\Microsoft.Bot.Builder.resources.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\fa\Microsoft.Bot.Builder.resources.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\fr\Microsoft.Bot.Builder.resources.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\ja\Microsoft.Bot.Builder.resources.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\ru\Microsoft.Bot.Builder.resources.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\obj\Release\ALIEBot.csprojResolveAssemblyReference.cache
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\obj\Release\ALIEBot.dll
+C:\Users\kaharri\Documents\GitHub\ALIEbot\ALIEBot\obj\Release\ALIEBot.pdb

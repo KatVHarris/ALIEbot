@@ -129,6 +129,10 @@
     <Content Include="packages.config" />
     <Content Include="Model\LUIS_Model.json" />
     <Content Include="Model\ALIEbot.json" />
+    <None Include="Properties\PublishProfiles\ALIEBot - FTP %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ALIEBot - FTP %283%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ALIEBot - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\ALIEBot - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\ALIEBot - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

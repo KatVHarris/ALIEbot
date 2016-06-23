@@ -34,6 +34,9 @@ Queries information on X, where X is the name of the Person, Place, or Thing, in
 #### Greeting
 Responds to users greeting with generic greetings.
 
+#### Upgrade
+Gives the user acess to all the hidden commands for querying data about the show instead of just elements inside the show. 
+
 ## Action Items
 * Restablish FB connection
 * Uncouple the Character Attchment cards from the LUIS_Integration Class. 
@@ -59,8 +62,15 @@ Syntax for reply.Text should follow the Microsoft Bot Frameowrk Markdown text.
 Examples of the text for Facebook and the Web are here: http://bit.ly/botMarkdown
 
 ## Coming Features:
-Sorting Characters
-Asking Character Current Location
-Returning Links relevant to the show
+* Get Facebook link back up and working
+* Asking about the creator (Becca and Kat)
+* Sorting Characters
+* Asking Character Current Location
+* Returning Links relevant to the show
+
+## Notes
+Slack integration is working, however the bot responds to ever post in the channel. To avoid this, add alie to a seprate #alie_bot channel to interact. 
+
+Unity integration may byspass certain callbacks in the bot framework since Unity runs on a different version of .Net/Mono. Direct calls to the LUIS framework will have to be integrated through a Node.js server. Elements to work on this part will happen this week - 06/22/16
 
 

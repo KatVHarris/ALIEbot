@@ -237,18 +237,33 @@ namespace ALIEBot
                                 });
                                 break;
                             case "kane":
-                                reply.Text = "Marcus Kane. Kane, former head of security on the Ark and temporary Chancellor. Kane is strategic was trained as a zero-g mechanic. Out of the Arkers Raven has the most powerful mind of the group. Her exit from the City of Light was a loss to be sure. \n\n" +
-                                    "* Age: 19 \n" +
+                                reply.Text = "Marcus Kane. Kane, former head of security on the Ark and temporary Chancellor. Kane is strategic but his weakness is his love for Abby. \n\n" +
+                                    "* Age: 42 \n" +
                                     "* Living Family: none \n" +
                                     "* Skills: Genius, Mechanic, Electronics Expert. \n" +
                                     "* Kills: -- \n";
                                 reply.Attachments = new List<Attachment>();
                                 reply.Attachments.Add(new Attachment
                                 {
-                                    Title = "Name: Raven Reyes",
+                                    Title = "Name: Marcus Kane",
                                     ContentType = "image/jpeg",
                                     ContentUrl = $"http://vignette4.wikia.nocookie.net/thehundred/images/2/2b/RavenS2Promo.png/revision/latest?cb=20160401040926",
-                                    Text = "It won't survive me"
+                                    Text = "200+"
+                                });
+                                break;
+                            case "bellamy":
+                                reply.Text = "Bellamy Blake. His weakness is his love for his sister and Clarke. He can be a great ralier of his people but is also easily manipulated.  \n\n" +
+                                    "* Age: 23  \n" +
+                                    "* Living Family: Octavia Blake \n" +
+                                    "* Skills: Tacticial knowledge, weapons expert \n" +
+                                    "* Kills: -- \n";
+                                reply.Attachments = new List<Attachment>();
+                                reply.Attachments.Add(new Attachment
+                                {
+                                    Title = "Name: Bellamy Blake",
+                                    ContentType = "image/jpeg",
+                                    ContentUrl = $"http://vignette2.wikia.nocookie.net/thehundred/images/5/5f/The-100-season-2-cast-photos-bellamy.png/revision/latest?cb=20160401042453",
+                                    Text = "400+"
                                 });
                                 break;
                             default:

@@ -20,7 +20,7 @@ The post for how I got everything working will be up at: http://katvharris.azure
 Catch all, generic response that is the default response for unknown intents that are returned in LUIS. 
 
 #### Help
-Gives hints as to what the user can do with the Bot.
+Gives hints as to what the user can do with the Bot. Help cahanges base on the version of ALIE. 
 
 #### CoreCommand
 States A.L.I.E.'s core command.
@@ -35,7 +35,7 @@ Queries information on X, where X is the name of the Person, Place, or Thing, in
 Responds to users greeting with generic greetings.
 
 #### Upgrade
-Gives the user acess to all the hidden commands for querying data about the show instead of just elements inside the show. 
+Gives the user acess to all the hidden commands for querying data about the show instead of just elements inside the show. The user needs to know the command phrase "ascende superius" to upgrade. 
 
 ## Action Items
 * Restablish FB connection
@@ -71,6 +71,6 @@ Examples of the text for Facebook and the Web are here: http://bit.ly/botMarkdow
 ## Notes
 Slack integration is working, however the bot responds to ever post in the channel. To avoid this, add alie to a seprate #alie_bot channel to interact. 
 
-Unity integration may byspass certain callbacks in the bot framework since Unity runs on a different version of .Net/Mono. Direct calls to the LUIS framework will have to be integrated through a Node.js server. Elements to work on this part will happen this week - 06/22/16
+Unity integration may byspass certain callbacks in the bot framework since Unity runs on a different version of .Net/Mono. Direct calls to the LUIS framework will have to be integrated through a Node.js server. Elements to work on this part will happen this week - 06/27/16
 
 

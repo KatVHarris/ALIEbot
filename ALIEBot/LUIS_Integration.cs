@@ -196,14 +196,14 @@ namespace ALIEBot
                                     "* Living Family: Dr. Abigail Griffin \n\n" +
                                     "* Kills: 900+ \n\n" +
                                     "* Skills: Politics, Medical Knowledge";
-;
+
                                 reply.Attachments = new List<Attachment>();
                                 reply.Attachments.Add(new Attachment
                                 {
                                     Title = "Name: Clarke Griffin - aka Wanheda - the Commander of Death.",
                                     ContentType = "image/jpeg",
                                     ContentUrl = $"http://vignette4.wikia.nocookie.net/thehundred/images/6/68/The-100-season-2-cast-photos-clarke.png/revision/latest?cb=20160401042738",
-                                    Text = "Clarke Griffin/Princess/Wanheda"
+                                    Text = "I tried to be the good guy."
                                 });
                                 break;
                             case "lexa":
@@ -218,7 +218,7 @@ namespace ALIEBot
                                     Title = "Name: Lexa kom Trikru- aka Heda - the Commander.",
                                     ContentType = "image/jpeg",
                                     ContentUrl = $"http://vignette1.wikia.nocookie.net/thehundred/images/8/80/Lexa1.png/revision/latest?cb=20160129174450",
-                                    Text = ""
+                                    Text = "Blood must not have blood."
                                 });
                                 break;
                             case "jaha":
@@ -226,13 +226,13 @@ namespace ALIEBot
                                     "* Age: 55 \n" +
                                     "* Living Family: none \n" +
                                     "* Skills: Leadership, Manipulation \n" +
-                                    "* Kills: 201 \n";
+                                    "* Kills: 327 \n";
                                 reply.Attachments = new List<Attachment>();
                                 reply.Attachments.Add(new Attachment
                                 {
                                     Title = "Name: Theloneous Jaha",
                                     ContentType = "image/jpeg",
-                                    ContentUrl = $"",
+                                    ContentUrl = $"http://vignette2.wikia.nocookie.net/thehundred/images/2/2d/The-100-season-2-cast-photos-jaha.png/revision/latest?cb=20160401043713",
                                     Text = "Take this leap of faith with me."
                                 });
                                 break;
@@ -241,29 +241,44 @@ namespace ALIEBot
                                     "* Age: 42 \n" +
                                     "* Living Family: none \n" +
                                     "* Skills: Genius, Mechanic, Electronics Expert. \n" +
-                                    "* Kills: -- \n";
+                                    "* Kills: 320 \n";
                                 reply.Attachments = new List<Attachment>();
                                 reply.Attachments.Add(new Attachment
                                 {
                                     Title = "Name: Marcus Kane",
                                     ContentType = "image/jpeg",
-                                    ContentUrl = $"http://vignette4.wikia.nocookie.net/thehundred/images/2/2b/RavenS2Promo.png/revision/latest?cb=20160401040926",
-                                    Text = "200+"
+                                    ContentUrl = $"http://vignette1.wikia.nocookie.net/thehundred/images/d/d0/The-100-season-2-cast-photos-kane.png/revision/latest?cb=20160401043722",
+                                    Text = "These are times when we have to look beyond the rules. To realize they were established to serve a world of the past. Not of the future. I beg you, one last time, to see the world as it is, not as it was or as you want it to be."
                                 });
                                 break;
                             case "bellamy":
-                                reply.Text = "Bellamy Blake. His weakness is his love for his sister and Clarke. He can be a great ralier of his people but is also easily manipulated.  \n\n" +
+                                reply.Text = "Bellamy Blake. His weakness is his love for his sister. He can be a great ralier of his people but is also easily manipulated.  \n\n" +
                                     "* Age: 23  \n" +
                                     "* Living Family: Octavia Blake \n" +
                                     "* Skills: Tacticial knowledge, weapons expert \n" +
-                                    "* Kills: -- \n";
+                                    "* Kills: 400+ \n";
                                 reply.Attachments = new List<Attachment>();
                                 reply.Attachments.Add(new Attachment
                                 {
                                     Title = "Name: Bellamy Blake",
                                     ContentType = "image/jpeg",
                                     ContentUrl = $"http://vignette2.wikia.nocookie.net/thehundred/images/5/5f/The-100-season-2-cast-photos-bellamy.png/revision/latest?cb=20160401042453",
-                                    Text = "400+"
+                                    Text = "Whatever the hell we want."
+                                });
+                                break;
+                            case "octavia":
+                                reply.Text = "Octavia Blake. Okteivia kom Skaikru. A warrior for the Trikru as Indra's second, she is a skilled fighter in hand to hand combat and sword play. \n\n" +
+                                    "* Age: 17  \n" +
+                                    "* Living Family: Bellamy Blake \n" +
+                                    "* Skills: Weapons expert, tracking, culture expert \n" +
+                                    "* Kills: 5 \n";
+                                reply.Attachments = new List<Attachment>();
+                                reply.Attachments.Add(new Attachment
+                                {
+                                    Title = "Name: Octavia Blake",
+                                    ContentType = "image/jpeg",
+                                    ContentUrl = $"http://vignette2.wikia.nocookie.net/thehundred/images/5/5f/The-100-season-2-cast-photos-bellamy.png/revision/latest?cb=20160401042453",
+                                    Text = "I am not afriad." 
                                 });
                                 break;
                             default:

@@ -81,6 +81,24 @@ namespace ALIEBot
             context.Wait(MessageReceived);
         }
 
+        [LuisIntent("Help")]
+        public async Task Help(IDialogContext context, LuisResult result)
+        {
+            var reply = context.MakeMessage();
+            var isupgraded = false;
+            context.UserData.TryGetValue("upgraded", out isupgraded);
+            if (isupgraded)
+            {
+                reply.Text = "I have been upgraded so I now have access to information outside the construct of the world. You can ask me questions about the show/creators/cast/crew instead of just the world of The 100";
+            }
+            else
+            {
+                reply.Text = "You can interact with me like any other chat bot. Type in commands like: Hello, Core Command, Find [Character Name], or Tell me about [Character Name], as well as Join the City of Light";
+            }
+            await context.PostAsync(reply);
+            context.Wait(MessageReceived);
+        }
+
         [LuisIntent("JoinCOL")]
         public async Task JoinCOL(IDialogContext context, LuisResult result)
         {

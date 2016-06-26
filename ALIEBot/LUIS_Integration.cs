@@ -127,42 +127,6 @@ namespace ALIEBot
             context.Wait(MessageReceived);
         }
 
-        [LuisIntent("SetResponse")]
-        public async Task Miscellaneous(IDialogContext context, LuisResult result)
-        {
-            //Miscaneous Entity = Core, Creator // if there is also a character it is for Creator
-            var entitiesArray = result.Entities;
-
-            var reply = context.MakeMessage();
-            if (entitiesArray.Count > 1)
-            {
-                foreach (var entityItem in result.Entities)
-                {
-                    //Creator
-                    if(entityItem.Type == "Character" && entityItem.Type == "Miscellaneous")
-                    {
-                        reply.Text = "Becca is my creator.";
-                    }
-                }
-            }
-            else if (entitiesArray.Count == 1)
-            {
-                var entityItem = entitiesArray[0];
-                //core command
-                if (entityItem.Type == "Miscelaneous" && entityItem.Entity == "core")
-                {
-                    reply.Text = "My core command is to make life better.";
-                }
-
-            }
-            else
-            {
-                reply.Text = "I'm sorry I don't understand.";
-            }
-
-            await context.PostAsync(reply);
-            context.Wait(MessageReceived);
-        }
 
         [LuisIntent("Greeting")]
         public async Task Greeting(IDialogContext context, LuisResult result)
@@ -170,10 +134,6 @@ namespace ALIEBot
             Random random = new Random();
             int x = random.Next(0, 5);
             string message = Greetings[x];
-            //None is the default response
-            //string message = "Hello there. Is it not a the perfect time to join the City of Light.";
-            //Can also respond with the following if you don't have a set default message- $"Sorry I did not understand: " + string.Join(", ", result.Intents.Select(i => i.Intent));
-
             await context.PostAsync(message);
             context.Wait(MessageReceived);
         }

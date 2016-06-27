@@ -281,109 +281,122 @@ namespace ALIEBot
         [LuisIntent("SortCharacter")]
         public async Task SortCharacter(IDialogContext context, LuisResult result)
         {
-
-            var entitiesArray = result.Entities;
-
-            var reply = context.MakeMessage();
-
-            if (entitiesArray.Count >= 1)
+            var isupgraded = false;
+            context.UserData.TryGetValue("upgraded", out isupgraded);
+            if (!isupgraded)
             {
-                foreach (var entityItem in result.Entities)
+                var reply = context.MakeMessage();
+                reply.Text = "Sorry I do not understand that command. How else can I help?";
+                await context.PostAsync(reply);
+                context.Wait(MessageReceived);
+            }
+            else
+            {
+
+
+                var entitiesArray = result.Entities;
+
+                var reply = context.MakeMessage();
+
+                if (entitiesArray.Count >= 1)
                 {
-                    if (entityItem.Type == "Character")
+                    foreach (var entityItem in result.Entities)
                     {
-                        switch (entityItem.Entity)
+                        if (entityItem.Type == "Character")
                         {
-                            case "raven":
-                                reply.Text = "Raven is in Ravenclaw. Her thrist for knowlege and understanding drives her actions and is core to who she is. She's also brash brave and bold, which makes her secondary house Gryffindor.";
-                                reply.Attachments = new List<Attachment>();
-                                reply.Attachments.Add(new Attachment
-                                {
-                                    Title = "Name: Raven Reyes",
-                                    ContentType = "image/jpeg",
-                                    ContentUrl = $"http://www.hp-lexicon.org/images/icons/shield_rav.jpg",
-                                    Text = "It won't survive me"
-                                });
-                                break;
-                            case "clarke":
-                                reply.Text = "Clarke is a Gryffindor; strong, determined, and continusously striving to do what is right for her people. Her manipulation skills can rival most slytherins, making it her secondary house.";
+                            switch (entityItem.Entity)
+                            {
+                                case "raven":
+                                    reply.Text = "Raven is in Ravenclaw. Her thrist for knowlege and understanding drives her actions and is core to who she is. She's also brash brave and bold, which makes her secondary house Gryffindor.";
+                                    reply.Attachments = new List<Attachment>();
+                                    reply.Attachments.Add(new Attachment
+                                    {
+                                        Title = "Name: Raven Reyes",
+                                        ContentType = "image/jpeg",
+                                        ContentUrl = $"http://www.hp-lexicon.org/images/icons/shield_rav.jpg",
+                                        Text = "It won't survive me"
+                                    });
+                                    break;
+                                case "clarke":
+                                    reply.Text = "Clarke is a Gryffindor; strong, determined, and continusously striving to do what is right for her people. Her manipulation skills can rival most slytherins, making it her secondary house.";
 
-                                reply.Attachments = new List<Attachment>();
-                                reply.Attachments.Add(new Attachment
-                                {
-                                    Title = "Name: Clarke Griffin - aka Wanheda - the Commander of Death.",
-                                    ContentType = "image/jpeg",
-                                    ContentUrl = $"http://img09.deviantart.net/ab05/i/2011/197/c/9/gryffindor_flag_by_kooro_sama-d3ud5ym.png",
-                                    Text = "I tried to be the good guy."
-                                });
-                                break;
-                            case "lexa":
-                                reply.Text = "Lexa is part of house Ravenclaw. Analytical and able to adopt other houses traits for whatever situation she finds herself in.";
-                                reply.Attachments = new List<Attachment>();
-                                reply.Attachments.Add(new Attachment
-                                {
-                                    Title = "Name: Lexa kom Trikru- aka Heda - the Commander.",
-                                    ContentType = "image/jpeg",
-                                    ContentUrl = $"http://www.hp-lexicon.org/images/icons/shield_rav.jpg",
-                                    Text = "Blood must not have blood."
-                                });
-                                break;
-                            case "jaha":
-                                reply.Text = "Theloneous Jaha belongs to Gryffindor. Although having questionable means of how he protects his people, their wellbeing is the driving force of his actions.";
-                                reply.Attachments = new List<Attachment>();
-                                reply.Attachments.Add(new Attachment
-                                {
-                                    Title = "Name: Theloneous Jaha",
-                                    ContentType = "image/jpeg",
-                                    ContentUrl = $"http://img09.deviantart.net/ab05/i/2011/197/c/9/gryffindor_flag_by_kooro_sama-d3ud5ym.png",
-                                    Text = "Take this leap of faith with me."
-                                });
-                                break;
-                            case "kane":
-                                reply.Text = "Marcus Kane, will sacrafice even himeself for the greater good, and protect people. ";
-                                reply.Attachments = new List<Attachment>();
-                                reply.Attachments.Add(new Attachment
-                                {
-                                    Title = "Name: Marcus Kane",
-                                    ContentType = "image/jpeg",
-                                    ContentUrl = $"http://www.hp-lexicon.org/images/icons/shield_huf.jpg",
-                                    Text = "These are times when we have to look beyond the rules. To realize they were established to serve a world of the past. Not of the future. I beg you, one last time, to see the world as it is, not as it was or as you want it to be."
-                                });
-                                break;
-                            case "bellamy":
-                                reply.Text = "Bellamy Blake tries to do what right for the greater good, however he will always place those he loves first. He is a Slytherin through and through. ";
-                                reply.Attachments = new List<Attachment>();
-                                reply.Attachments.Add(new Attachment
-                                {
-                                    Title = "Name: Bellamy Blake",
-                                    ContentType = "image/jpeg",
-                                    ContentUrl = $"http://vignette2.wikia.nocookie.net/harrypotter/images/7/70/Slytherincrest.jpg/revision/latest?cb=20110401010320",
-                                    Text = "Whatever the hell we want."
-                                });
-                                break;
-                            case "octavia":
-                                reply.Text = "Octavia Blake will do anything for those she loves, and fights to protect what's hers, even if it means sacraficing others. \n\n" ;
-                                reply.Attachments = new List<Attachment>();
-                                reply.Attachments.Add(new Attachment
-                                {
-                                    Title = "Name: Octavia Blake",
-                                    ContentType = "image/jpeg",
-                                    ContentUrl = $"http://vignette2.wikia.nocookie.net/harrypotter/images/7/70/Slytherincrest.jpg/revision/latest?cb=20110401010320",
-                                    Text = "I am not afriad."
-                                });
-                                break;
-                            default:
-                                reply.Text = ("I have not yet sorted that character. " +
-                                    "What other information would you like to know?");
+                                    reply.Attachments = new List<Attachment>();
+                                    reply.Attachments.Add(new Attachment
+                                    {
+                                        Title = "Name: Clarke Griffin - aka Wanheda - the Commander of Death.",
+                                        ContentType = "image/jpeg",
+                                        ContentUrl = $"http://img09.deviantart.net/ab05/i/2011/197/c/9/gryffindor_flag_by_kooro_sama-d3ud5ym.png",
+                                        Text = "I tried to be the good guy."
+                                    });
+                                    break;
+                                case "lexa":
+                                    reply.Text = "Lexa is part of house Ravenclaw. Analytical and able to adopt other houses traits for whatever situation she finds herself in.";
+                                    reply.Attachments = new List<Attachment>();
+                                    reply.Attachments.Add(new Attachment
+                                    {
+                                        Title = "Name: Lexa kom Trikru- aka Heda - the Commander.",
+                                        ContentType = "image/jpeg",
+                                        ContentUrl = $"http://www.hp-lexicon.org/images/icons/shield_rav.jpg",
+                                        Text = "Blood must not have blood."
+                                    });
+                                    break;
+                                case "jaha":
+                                    reply.Text = "Theloneous Jaha belongs to Gryffindor. Although having questionable means of how he protects his people, their wellbeing is the driving force of his actions.";
+                                    reply.Attachments = new List<Attachment>();
+                                    reply.Attachments.Add(new Attachment
+                                    {
+                                        Title = "Name: Theloneous Jaha",
+                                        ContentType = "image/jpeg",
+                                        ContentUrl = $"http://img09.deviantart.net/ab05/i/2011/197/c/9/gryffindor_flag_by_kooro_sama-d3ud5ym.png",
+                                        Text = "Take this leap of faith with me."
+                                    });
+                                    break;
+                                case "kane":
+                                    reply.Text = "Marcus Kane, will sacrafice even himeself for the greater good, and protect people. ";
+                                    reply.Attachments = new List<Attachment>();
+                                    reply.Attachments.Add(new Attachment
+                                    {
+                                        Title = "Name: Marcus Kane",
+                                        ContentType = "image/jpeg",
+                                        ContentUrl = $"http://www.hp-lexicon.org/images/icons/shield_huf.jpg",
+                                        Text = "These are times when we have to look beyond the rules. To realize they were established to serve a world of the past. Not of the future. I beg you, one last time, to see the world as it is, not as it was or as you want it to be."
+                                    });
+                                    break;
+                                case "bellamy":
+                                    reply.Text = "Bellamy Blake tries to do what right for the greater good, however he will always place those he loves first. He is a Slytherin through and through. ";
+                                    reply.Attachments = new List<Attachment>();
+                                    reply.Attachments.Add(new Attachment
+                                    {
+                                        Title = "Name: Bellamy Blake",
+                                        ContentType = "image/jpeg",
+                                        ContentUrl = $"http://vignette2.wikia.nocookie.net/harrypotter/images/7/70/Slytherincrest.jpg/revision/latest?cb=20110401010320",
+                                        Text = "Whatever the hell we want."
+                                    });
+                                    break;
+                                case "octavia":
+                                    reply.Text = "Octavia Blake will do anything for those she loves, and fights to protect what's hers, even if it means sacraficing others. \n\n";
+                                    reply.Attachments = new List<Attachment>();
+                                    reply.Attachments.Add(new Attachment
+                                    {
+                                        Title = "Name: Octavia Blake",
+                                        ContentType = "image/jpeg",
+                                        ContentUrl = $"http://vignette2.wikia.nocookie.net/harrypotter/images/7/70/Slytherincrest.jpg/revision/latest?cb=20110401010320",
+                                        Text = "I am not afriad."
+                                    });
+                                    break;
+                                default:
+                                    reply.Text = ("I have not yet sorted that character. " +
+                                        "What other information would you like to know?");
 
-                                break;
+                                    break;
+                            }
+
                         }
-
                     }
                 }
+                await context.PostAsync(reply);
+                context.Wait(MessageReceived);
             }
-            await context.PostAsync(reply);
-            context.Wait(MessageReceived);
         }
 
     }

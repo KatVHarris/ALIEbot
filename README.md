@@ -31,11 +31,22 @@ Creates a ConfirmationDialog for the user to respond with affirmitive/negitive c
 #### NameQuery
 Queries information on X, where X is the name of the Person, Place, or Thing, in the world of the 100. 
 
+Current Character Attachment Cards
+
+* Clarke
+* Lexa
+* Raven
+* Abby
+* Kane
+* Jaha
+* Bellamy
+* Octavia
+
 #### Greeting
 Responds to users greeting with generic greetings.
 
 #### Upgrade
-Gives the user acess to all the hidden commands for querying data about the show instead of just elements inside the show. The user needs to know the command phrase "ascende superius" to upgrade. 
+Gives the user acess to all the hidden commands for querying data about the show instead of just elements inside the show. The user needs to know the command phrase "ascende superius" to upgrade. "Help" Command will also reveal list of hidden commands. 
 
 ## Action Items
 * Restablish FB connection

@@ -33,7 +33,6 @@ namespace ALIEBot
                 //return await Conversation.SendAsync(message, () => new SimpleDialog());
                 //return await Conversation.SendAsync(message, () => ComplexDialogChain.dialog);
                 return await Conversation.SendAsync(message, () => new LUIS_Integration());
-                //return await Conversation.SendAsync(message, () => new Complex_LUIS_Integration());
 
             }
             else

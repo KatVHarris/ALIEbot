@@ -48,6 +48,9 @@ Responds to users greeting with generic greetings.
 #### Upgrade
 Gives the user acess to all the hidden commands for querying data about the show instead of just elements inside the show. The user needs to know the command phrase "ascende superius" to upgrade. "Help" Command will also reveal list of hidden commands. 
 
+#### Sort Character
+This command can only be used after upgrading. It tells users which house each character belongs to with attachement card of the house and a descrioption of why they are in that house. 
+
 ## Action Items
 * Restablish FB connection
 * Uncouple the Character Attchment cards from the LUIS_Integration Class. 

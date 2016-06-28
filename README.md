@@ -3,6 +3,14 @@
 ### Author
 Katherine "Kat" Harris - Microsoft Technical Evangelist (TE) - Twitter: @KatVHarris
 
+### Update - 
+The LUIS API is being update. The code for accessing the LUIS framework will change. Intents will soon be accessed through the Intent[] tag instead of the current LUIS[] tag. Because of the pending changes I will wait for adding anymore LUIS functionality and start integrating LUIS to Unity with a UWP application for Windows 10
+
+## Notes
+Slack integration is working, however the bot responds to ever post in the channel. To avoid this, add alie to a seprate #alie_bot channel to interact. 
+
+Unity integration may byspass certain callbacks in the bot framework since Unity runs on a different version of .Net/Mono. Direct calls to the LUIS framework will have to be integrated through a Node.js server. Elements to work on this part will happen this week - 06/27/16
+
 ## Interact and Test
 Web: http://aliebot.azurewebsites.net/
 
@@ -82,9 +90,6 @@ Examples of the text for Facebook and the Web are here: http://bit.ly/botMarkdow
 * Asking Character Current Location
 * Returning Links relevant to the show
 
-## Notes
-Slack integration is working, however the bot responds to ever post in the channel. To avoid this, add alie to a seprate #alie_bot channel to interact. 
 
-Unity integration may byspass certain callbacks in the bot framework since Unity runs on a different version of .Net/Mono. Direct calls to the LUIS framework will have to be integrated through a Node.js server. Elements to work on this part will happen this week - 06/27/16
 
 

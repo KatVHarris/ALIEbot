@@ -86,7 +86,6 @@ Examples of the text for Facebook and the Web are here: http://bit.ly/botMarkdow
 ## Coming Features:
 * Get Facebook link back up and working
 * Asking about the creator (Becca and Kat)
-* Sorting Characters
 * Asking Character Current Location
 * Returning Links relevant to the show
 

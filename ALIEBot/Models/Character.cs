@@ -12,12 +12,26 @@ namespace ALIEbot.Models
         public static Dictionary<string, Character> characterDictionary = new Dictionary<string, Character>();
         static CharacterList FullCharacterList;
 
+        
         public static void BuildCharactersFromJSON()
         {
             FullCharacterList = new CharacterList();
-            string jsonText = Resources.CharacterJSON;
+            string jsonText = Resources.JSONCharacters;
             FullCharacterList = JsonConvert.DeserializeObject<CharacterList>(jsonText);
+            AddAllCharacters();
         }
+        
+        /*
+        public static bool BuildCharactersFromJSON()
+        {
+            bool x = false;
+            FullCharacterList = new CharacterList();
+            string jsonText = Resources.JSONCharacters;
+            FullCharacterList = JsonConvert.DeserializeObject<CharacterList>(jsonText);
+            x = AddAllCharacters();
+            return x;
+        }
+        */
         public static void AddAllCharacters()
         {
             // For each Character in Character List add to Dictionary
@@ -25,6 +39,7 @@ namespace ALIEbot.Models
             {
                 characterDictionary.Add(c.id, c);
             }
+           
         }
 
         /// <summary>

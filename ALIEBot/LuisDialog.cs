@@ -1,14 +1,14 @@
-﻿using Microsoft.Bot.Builder.Dialogs;
+﻿using ALIEbot.Models;
+using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
+using Microsoft.Bot.Connector;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
-using System.Text.RegularExpressions;
-using Microsoft.Bot.Connector;
-using ALIEbot.Models;
 
 namespace ALIEbot
 {
@@ -17,7 +17,7 @@ namespace ALIEbot
     // Extend the LuisDialog<object>
     [LuisModel("a287f18f-4ae3-4346-b712-2bb9468f81c2", "f2b59c258e5042a3b265498b92acd8a8")]
     [Serializable]
-    public class LuisDialog : LuisDialog<Object>
+    public class LUISDialog : LuisDialog<Object>
     {
         string[] Greetings = new string[]{ "Hello there. Is it not a the perfect time to join the City of Light.",
             "Hello, I'm A.L.I.E. I'm here to help.",
@@ -140,6 +140,11 @@ namespace ALIEbot
                 {
                     if (entityItem.Type == "Character")
                     {
+                        if(CharacterDictionary.characterDictionary.Count < 3)
+                        {
+                            //build dictionary
+                            DataBuilder.BuildCharacters();
+                        }
                         // If entityItem.Entity isn't in Dictionary default text
                         if (CharacterDictionary.characterDictionary.ContainsKey(entityItem.Entity))
                         {
@@ -159,6 +164,7 @@ namespace ALIEbot
                                 Images = cardImages
 
                             };
+                            reply.Attachments.Add(plCard.ToAttachment());
                         }
                         else
                         {

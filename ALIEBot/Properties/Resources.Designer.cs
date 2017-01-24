@@ -75,9 +75,18 @@ namespace ALIEbot.Properties {
         ///      &quot;DescriptionLink&quot;: &quot;...&quot;,
         ///      &quot;ImageLink&quot;: &quot;http://vignette4.wikia.nocookie.net/t [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string CharacterJSON {
+        internal static string JSONCharacters {
             get {
-                return ResourceManager.GetString("CharacterJSON", resourceCulture);
+                return ResourceManager.GetString("JSONCharacters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to }.
+        /// </summary>
+        internal static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
     }

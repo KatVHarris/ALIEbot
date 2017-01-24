@@ -8,7 +8,6 @@ using System.Web.Http.Description;
 using Microsoft.Bot.Connector;
 using Newtonsoft.Json;
 using Microsoft.Bot.Builder.Dialogs;
-using ALIEbot.Models;
 
 namespace ALIEbot
 {
@@ -23,7 +22,14 @@ namespace ALIEbot
         {
             if (activity.Type == ActivityTypes.Message)
             {
-                await Conversation.SendAsync(activity, () => new LuisDialog());
+                //ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
+                //// calculate something for us to return
+                //int length = (activity.Text ?? string.Empty).Length;
+
+                //// return our reply to the user
+                //Activity reply = activity.CreateReply($"You sent {activity.Text} which was {length} characters");
+                //await connector.Conversations.ReplyToActivityAsync(reply);
+                await Conversation.SendAsync(activity, () => new LUISDialog());
             }
             else
             {
@@ -45,7 +51,6 @@ namespace ALIEbot
                 // Handle conversation state changes, like members being added and removed
                 // Use Activity.MembersAdded and Activity.MembersRemoved and Activity.Action for info
                 // Not available in all channels
-                DataBuilder.BuildCharacters();
             }
             else if (message.Type == ActivityTypes.ContactRelationUpdate)
             {

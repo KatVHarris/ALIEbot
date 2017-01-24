@@ -15,26 +15,24 @@ namespace ALIEbot.App_Start
     /// DataBuilder: Formats JSON Data into Managable data. Builds Dictionary for easy lookup
     /// Currently only for local data, eventually link to Database
     /// </summary>
-    public static class DataBuilder
+    public class DataBuilder
     {
-        public static CharacterList FullCharacterList;
-        public static List<Character> HouseListCharacters;
-        public static List<Character> LocationListCharacters;
+        public CharacterList FullCharacterList;
+        public  List<Character> Boo;
+        public  List<Character> HouseListCharacters;
+        public  List<Character> LocationListCharacters;
 
 
         /// <summary>
         /// BuildCharacters: Builds Characters from JSON data 
         /// </summary>
-        public static void BuildCharacters()
+        public  void BuildCharacters()
         {
-            //string startupPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).FullName, "/Models/JSONCharacters.json");
-            string jsonText = Resources.CharactersJSON;
-
-            FullCharacterList = JsonConvert.DeserializeObject<CharacterList>(jsonText);
-            Debug.WriteLine("dos");
+            FullCharacterList = new CharacterList();
+            CharacterDictionary.BuildCharactersFromJSON(FullCharacterList);
         }
 
-        public static void BuildHouses()
+        public  void BuildHouses()
         {
 
         }
@@ -42,17 +40,17 @@ namespace ALIEbot.App_Start
         /// <summary>
         /// BuildHouseList: For each character add them to appropriate house list
         /// </summary>
-        static void BuildHouseList()
+         void BuildHouseList()
         {
 
         }
 
-        static void BuildLocations()
+         void BuildLocations()
         {
 
         }
 
-        static void BuildLocationList()
+         void BuildLocationList()
         {
 
         }

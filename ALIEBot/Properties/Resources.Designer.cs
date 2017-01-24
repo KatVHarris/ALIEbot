@@ -61,6 +61,15 @@ namespace ALIEbot.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string BasicCharactersJSON {
+            get {
+                return ResourceManager.GetString("BasicCharactersJSON", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {
         ///   &quot;Characters&quot;: [
         ///    {

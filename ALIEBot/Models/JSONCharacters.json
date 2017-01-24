@@ -1,3 +1,130 @@
 ﻿{
-
+  "Characters": [
+    {
+      "id":"clarke",
+      "Name": "Clarke Griffin",
+      "Description": "Clarke is strong and determined. Her friends and family are her weakness. She is not as clever as Raven, though she is resourceful.",
+      "Age": "18",
+      "LivingRelatvies": "Dr. Abigail Griffin",
+      "Kills" : "1000+",
+      "Skills": "Negotiation, Medical Knowledge",
+      "Quote": "Clarke Griffin",
+      "DescriptionLink": "...",
+      "ImageLink": "http://vignette4.wikia.nocookie.net/thehundred/images/6/68/The-100-season-2-cast-photos-clarke.png/revision/latest?cb=20160401042738",
+      "Location": "Tondc",
+      "House": {
+        "HouseName": "Gryffindor",
+        "HouseDescription" : "Ironically Clarke Griffin sorts into house Gryffindor; strong, determined, and continusously striving to do what is right for her people. Her manipulation skills can rival most slytherins, making it her secondary house."
+      },
+      "Group": "Sky People"
+    },
+    {
+      "id":"raven",
+      "Name": "Raven Reyes",
+      "Description": "Raven was trained as a zero-g mechanic. Out of the Arkers Raven has the most powerful mind of the group. Her exit from the City of Light was a loss to be sure.",
+      "Age": "19",
+      "LivingRelatvies": "none",
+      "Kills" : "30",
+      "Skills": "Genius, Mechanic, Electronics Expert.",
+      "Quote": "It won't survive me",
+      "DescriptionLink": "d",
+      "ImageLink": "http://vignette4.wikia.nocookie.net/thehundred/images/2/2b/RavenS2Promo.png/revision/latest?cb=20160401040926",
+      "Location": "Tondc",
+      "House": {
+        "HouseName": "Ravenclaw",
+        "HouseDescription" : "Fitting that Raven is in house Ravenclaw. Her thrist for knowlege and understanding drives her actions and is core to who she is. She's also brash brave and bold, which makes her secondary house Gryffindor."
+      },
+      "Group": "Sky People"
+    },
+    {
+      "id": "lexa",
+      "Name": "Lexa kom Trikru- aka Heda - the Commander.",
+      "Description": "Lexa was the commander of the grounders, an avid warrior, who sought peace with the people from the Ark. She was the host for part 2 of my code until her consciousness was integrated into the second A.I.",
+      "Age": "Approximately 20",
+      "LivingRelatvies": "Unknown",
+      "Kills" : "Unknown",
+      "Skills": "Politics, Strategy, Hand to Hand combat, Sword Fighting, Knife Throwing",
+      "Quote": "Blood must not have blood.",
+      "DescriptionLink": "d",
+      "ImageLink": "http://vignette1.wikia.nocookie.net/thehundred/images/8/80/Lexa1.png/revision/latest?cb=20160129174450",
+      "Location": "The Flame",
+      "House": {
+        "HouseName": "Ravenclaw",
+        "HouseDescription" : "Lexa is part of house Ravenclaw. Analytical and able to adopt other houses traits for whatever situation she finds herself in."
+      },
+      "Group": "Trikru"
+    },
+    {
+      "id": "jaha",
+      "Name": "Theloneous Jaha",
+      "Description": "Former Chancellor of the Ark. Instrumental in gainning follwers for the City of Light.",
+      "Age": "55",
+      "LivingRelatvies": "none",
+      "Kills" : "327",
+      "Skills": "Persuasion and Rhetoric, Navigation",
+      "Quote": "Take this leap of faith with me.",
+      "DescriptionLink": "d",
+      "ImageLink": "http://vignette2.wikia.nocookie.net/thehundred/images/2/2d/The-100-season-2-cast-photos-jaha.png/revision/latest?cb=20160401043713",
+      "Location": "Tondc",
+      "House": {
+        "HouseName": "Gryffindor",
+        "HouseDescription" : "Theloneous Jaha belongs to Gryffindor. Although having questionable means of how he protects his people, making his secondary house Slytherin, he see's himself as the savior and their wellbeing is the driving force of his actions."
+      },
+      "Group": "Sky People"
+    },
+    {
+      "id":"kane",
+      "Name": "Marcus Kane",
+      "Description": "Kane was former head of security and temporary Chancellor on the Ark. He resumed his post as Head of Secutity after the Ark landed. Kane also took the brand representing the Arkers as the 13th tribe of the Commander's Coalition, however lost the election to Pike, thus negating the brand.  He is strategic but his weakness is his love for Abby. ",
+      "Age": "f",
+      "LivingRelatvies": "none",
+      "Kills" : "320",
+      "Skills": "Weapons Expert, Military Tactics, Negotiation",
+      "Quote": "These are times when we have to look beyond the rules.",
+      "DescriptionLink": "d",
+      "ImageLink": "http://vignette1.wikia.nocookie.net/thehundred/images/d/d0/The-100-season-2-cast-photos-kane.png/revision/latest?cb=20160401043722",
+      "Location": "Tondc",
+      "House": {
+        "HouseName": "Hufflepuff",
+        "HouseDescription" : "Marcus Kane, will sacrafice even himeself for the greater good, and protect people."
+      },
+      "Group": "Skikru"
+    },
+    {
+      "id":"bellamy",
+      "Name": "Bellamy Blake",
+      "Description": "Bellamy Blake. His weakness is his love for his sister. He can be a great ralier of his people but is also easily manipulated.",
+      "Age": "23",
+      "LivingRelatvies": "Octavia Blake",
+      "Kills" : "400+",
+      "Skills": "Tactics, Weapons expert",
+      "Quote": "Whatever the hell we want.",
+      "DescriptionLink": "d",
+      "ImageLink": "http://vignette2.wikia.nocookie.net/thehundred/images/5/5f/The-100-season-2-cast-photos-bellamy.png/revision/latest?cb=20160401042453",
+      "Location": "Tondc",
+      "House": {
+        "HouseName": "Slytherin",
+        "HouseDescription" : "Bellamy Blake tries to do what right for the greater good, however he will always place those he loves first. He is a Slytherin through and through."
+      },
+      "Group": "Sky People"
+    },
+    {
+      "id":"octavia",
+      "Name": "Octavia Blake",
+      "Description": "Octavia Blake aka Okteivia kom Skaikru. A warrior for the Trikru as Indra's second, she is a skilled fighter in hand to hand combat and sword play.",
+      "Age": "17",
+      "LivingRelatvies": "Bellamy Blake",
+      "Kills" : "15",
+      "Skills": "Weapons expert, tracking, speaks grouder, cultural knowledge",
+      "Quote": "I am not afriad.",
+      "DescriptionLink": "d",
+      "ImageLink": "http://vignette2.wikia.nocookie.net/thehundred/images/5/5f/The-100-season-2-cast-photos-bellamy.png/revision/latest?cb=20160401042453",
+      "Location": "d",
+      "House": {
+        "HouseName": "Slytherin",
+        "HouseDescription" : "Slytherin House - Octavia Blake will do anything for those she loves, and fights to protect what's hers, even if it means sacraficing others."
+      },
+      "Group": "Skikru"
+    }    
+  ]
 }

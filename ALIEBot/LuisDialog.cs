@@ -169,6 +169,7 @@ namespace ALIEbot
 
                                 reply.Attachments = new List<Attachment>();
 
+
                                 break;
                             case "lexa":
                                 reply.Text = "Lexa was the commander of the grounders, an avid warrior, who sought peace with the people from the Ark. She was the host for part 2 of my code until her consciousness was integrated into the second A.I. \n\n " +

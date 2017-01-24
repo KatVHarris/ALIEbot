@@ -61,15 +61,6 @@ namespace ALIEbot.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        internal static string BasicCharactersJSON {
-            get {
-                return ResourceManager.GetString("BasicCharactersJSON", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to {
         ///   &quot;Characters&quot;: [
         ///    {
@@ -84,9 +75,9 @@ namespace ALIEbot.Properties {
         ///      &quot;DescriptionLink&quot;: &quot;...&quot;,
         ///      &quot;ImageLink&quot;: &quot;http://vignette4.wikia.nocookie.net/t [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string CharactersJSON {
+        internal static string CharacterJSON {
             get {
-                return ResourceManager.GetString("CharactersJSON", resourceCulture);
+                return ResourceManager.GetString("CharacterJSON", resourceCulture);
             }
         }
     }

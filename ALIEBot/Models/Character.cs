@@ -1,5 +1,4 @@
-﻿using ALIEbot.App_Start;
-using ALIEbot.Properties;
+﻿using ALIEbot.Properties;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -10,22 +9,38 @@ namespace ALIEbot.Models
 {
     public static class CharacterDictionary
     {
-        static Dictionary<string, Character> characterDictionary = new Dictionary<string, Character>();
+        public static Dictionary<string, Character> characterDictionary = new Dictionary<string, Character>();
         static CharacterList FullCharacterList;
 
         public static void BuildCharactersFromJSON()
         {
             FullCharacterList = new CharacterList();
-            string jsonText = Resources.CharactersJSON;
-            string basicCharacters = Resources.BasicCharactersJSON;
+            string jsonText = Resources.CharacterJSON;
             FullCharacterList = JsonConvert.DeserializeObject<CharacterList>(jsonText);
         }
         public static void AddAllCharacters()
         {
             // For each Character in Character List add to Dictionary
-            foreach(Character c in FullCharacterList.FullCharacterList)
+            foreach (Character c in FullCharacterList.FullCharacterList)
             {
                 characterDictionary.Add(c.id, c);
+            }
+        }
+
+        /// <summary>
+        /// Access the Dictionary from external sources
+        /// </summary>
+        public static Character GetCharacter(string word)
+        {
+            // Try to get the result in the static Dictionary
+            Character requestedCharacter;
+            if (characterDictionary.TryGetValue(word, out requestedCharacter))
+            {
+                return requestedCharacter;
+            }
+            else
+            {
+                return null;
             }
         }
 
@@ -63,7 +78,7 @@ namespace ALIEbot.Models
         [JsonProperty("id")]
         public string id { get; set; }
         [JsonProperty("Name")]
-        public string Name { get;  set; }
+        public string Name { get; set; }
         [JsonProperty("Description")]
         public string Description { get; set; }
         [JsonProperty("Age")]

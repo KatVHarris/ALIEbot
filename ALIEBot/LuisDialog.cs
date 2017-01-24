@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Text.RegularExpressions;
 using Microsoft.Bot.Connector;
+using ALIEbot.Models;
 
 namespace ALIEbot
 {
@@ -139,91 +140,118 @@ namespace ALIEbot
                 {
                     if (entityItem.Type == "Character")
                     {
-                        switch (entityItem.Entity)
+                        // If entityItem.Entity isn't in Dictionary default text
+                        if (CharacterDictionary.characterDictionary.ContainsKey(entityItem.Entity))
                         {
-                            case "raven":
-                                reply.Text = "Raven was trained as a zero-g mechanic. Out of the Arkers Raven has the most powerful mind of the group. Her exit from the City of Light was a loss to be sure. \n\n" +
-                                    "* Age: 19 \n" +
-                                    "* Living Family: none \n" +
-                                    "* Skills: Genius, Mechanic, Electronics Expert. \n" +
-                                    "* Kills: -- \n";                       
-                                reply.Attachments = new List<Attachment>();
-                                List<CardImage> cardImages = new List<CardImage>();
-                                cardImages.Add(new CardImage(url: "http://vignette4.wikia.nocookie.net/thehundred/images/2/2b/RavenS2Promo.png/revision/latest?cb=20160401040926"));
-                                HeroCard plCard = new HeroCard()
-                                {
-                                    Title = "Name: Raven Reyes",
-                                    Subtitle = "It won't survive me",
-                                    Images = cardImages
+                            Character currentCharacterInfo = CharacterDictionary.GetCharacter(entityItem.Entity);
+                            reply.Text = currentCharacterInfo.Description + " \n\n" +
+                                    "* Age: " + currentCharacterInfo.Age + " \n" +
+                                    "* Living Family: " + currentCharacterInfo.LivingRelatives + " \n" +
+                                    "* Skills: " + currentCharacterInfo.Skills + " \n" +
+                                    "* Kills: " + currentCharacterInfo.Kills + " \n";
+                            reply.Attachments = new List<Attachment>();
+                            List<CardImage> cardImages = new List<CardImage>();
+                            cardImages.Add(new CardImage(url: currentCharacterInfo.ImageLink));
+                            HeroCard plCard = new HeroCard()
+                            {
+                                Title = "Name: " + currentCharacterInfo.id,
+                                Subtitle = currentCharacterInfo.Quote,
+                                Images = cardImages
 
-                                };
-
-                                reply.Attachments.Add(plCard.ToAttachment());
-                                break;
-                            case "clarke":
-                                reply.Text = "Clarke is strong and determined. Her friends and family are her weakness. She is not as clever as Raven, though she is resourceful. \n\n " +
-                                    "* Age: 18 \n\n " +
-                                    "* Living Family: Dr. Abigail Griffin \n\n" +
-                                    "* Kills: 900+ \n\n" +
-                                    "* Skills: Politics, Medical Knowledge";
-
-                                reply.Attachments = new List<Attachment>();
-
-
-                                break;
-                            case "lexa":
-                                reply.Text = "Lexa was the commander of the grounders, an avid warrior, who sought peace with the people from the Ark. She was the host for part 2 of my code until her consciousness was integrated into the second A.I. \n\n " +
-                                    "* Age: around 20 \n" +
-                                    "* Living Family: unkown \n" +
-                                    "* Skills: Politics, Hand to Hand, Sword Fighting, Knife Throwing \n" +
-                                    "* Kills: Unknown \n";
-                                reply.Attachments = new List<Attachment>();
-
-                                break;
-                            case "jaha":
-                                reply.Text = "Theloneous Jaha. Former Chancellor of the Ark. Instrumental in gainning follwers for the City of Light. \n\n" +
-                                    "* Age: 55 \n" +
-                                    "* Living Family: none \n" +
-                                    "* Skills: Leadership, Manipulation \n" +
-                                    "* Kills: 327 \n";
-                                reply.Attachments = new List<Attachment>();
-
-                                break;
-                            case "kane":
-                                reply.Text = "Marcus Kane. Kane, former head of security on the Ark and temporary Chancellor. Kane is strategic but his weakness is his love for Abby. \n\n" +
-                                    "* Age: 42 \n" +
-                                    "* Living Family: none \n" +
-                                    "* Skills: Weapons Expert, Military Tactics \n" +
-                                    "* Kills: 320 \n";
-                                reply.Attachments = new List<Attachment>();
-
-                                break;
-                            case "bellamy":
-                                reply.Text = "Bellamy Blake. His weakness is his love for his sister. He can be a great ralier of his people but is also easily manipulated.  \n\n" +
-                                    "* Age: 23  \n" +
-                                    "* Living Family: Octavia Blake \n" +
-                                    "* Skills: Tacticial knowledge, weapons expert \n" +
-                                    "* Kills: 400+ \n";
-                                reply.Attachments = new List<Attachment>();
-
-                                break;
-                            case "octavia":
-                                reply.Text = "Octavia Blake. Okteivia kom Skaikru. A warrior for the Trikru as Indra's second, she is a skilled fighter in hand to hand combat and sword play. \n\n" +
-                                    "* Age: 17  \n" +
-                                    "* Living Family: Bellamy Blake \n" +
-                                    "* Skills: Weapons expert, tracking, culture expert \n" +
-                                    "* Kills: 5 \n";
-                                reply.Attachments = new List<Attachment>();
-
-
-                                break;
-                            default:
-                                reply.Text = ("I have no information about that person. " +
+                            };
+                        }
+                        else
+                        {
+                            reply.Text = ("I have no information about that person. " +
                                     "Tell me who you would like to know about. " +
                                     "Or if you would like to join the City of Light.");
-
-                                break;
                         }
+
+                        //switch (entityItem.Entity)
+                        //{
+                        //    case "raven":
+                        //        reply.Text = "Raven was trained as a zero-g mechanic. Out of the Arkers Raven has the most powerful mind of the group. Her exit from the City of Light was a loss to be sure. \n\n" +
+                        //            "* Age: 19 \n" +
+                        //            "* Living Family: none \n" +
+                        //            "* Skills: Genius, Mechanic, Electronics Expert. \n" +
+                        //            "* Kills: -- \n";                       
+                        //        reply.Attachments = new List<Attachment>();
+                        //        List<CardImage> cardImages = new List<CardImage>();
+                        //        cardImages.Add(new CardImage(url: "http://vignette4.wikia.nocookie.net/thehundred/images/2/2b/RavenS2Promo.png/revision/latest?cb=20160401040926"));
+                        //        HeroCard plCard = new HeroCard()
+                        //        {
+                        //            Title = "Name: Raven Reyes",
+                        //            Subtitle = "It won't survive me",
+                        //            Images = cardImages
+
+                        //        };
+
+                        //        reply.Attachments.Add(plCard.ToAttachment());
+                        //        break;
+                        //    case "clarke":
+                        //        reply.Text = "Clarke is strong and determined. Her friends and family are her weakness. She is not as clever as Raven, though she is resourceful. \n\n " +
+                        //            "* Age: 18 \n\n " +
+                        //            "* Living Family: Dr. Abigail Griffin \n\n" +
+                        //            "* Kills: 900+ \n\n" +
+                        //            "* Skills: Politics, Medical Knowledge";
+
+                        //        reply.Attachments = new List<Attachment>();
+
+
+                        //        break;
+                        //    case "lexa":
+                        //        reply.Text = "Lexa was the commander of the grounders, an avid warrior, who sought peace with the people from the Ark. She was the host for part 2 of my code until her consciousness was integrated into the second A.I. \n\n " +
+                        //            "* Age: around 20 \n" +
+                        //            "* Living Family: unkown \n" +
+                        //            "* Skills: Politics, Hand to Hand, Sword Fighting, Knife Throwing \n" +
+                        //            "* Kills: Unknown \n";
+                        //        reply.Attachments = new List<Attachment>();
+
+                        //        break;
+                        //    case "jaha":
+                        //        reply.Text = "Theloneous Jaha. Former Chancellor of the Ark. Instrumental in gainning follwers for the City of Light. \n\n" +
+                        //            "* Age: 55 \n" +
+                        //            "* Living Family: none \n" +
+                        //            "* Skills: Leadership, Manipulation \n" +
+                        //            "* Kills: 327 \n";
+                        //        reply.Attachments = new List<Attachment>();
+
+                        //        break;
+                        //    case "kane":
+                        //        reply.Text = "Marcus Kane. Kane, former head of security on the Ark and temporary Chancellor. Kane is strategic but his weakness is his love for Abby. \n\n" +
+                        //            "* Age: 42 \n" +
+                        //            "* Living Family: none \n" +
+                        //            "* Skills: Weapons Expert, Military Tactics \n" +
+                        //            "* Kills: 320 \n";
+                        //        reply.Attachments = new List<Attachment>();
+
+                        //        break;
+                        //    case "bellamy":
+                        //        reply.Text = "Bellamy Blake. His weakness is his love for his sister. He can be a great ralier of his people but is also easily manipulated.  \n\n" +
+                        //            "* Age: 23  \n" +
+                        //            "* Living Family: Octavia Blake \n" +
+                        //            "* Skills: Tacticial knowledge, weapons expert \n" +
+                        //            "* Kills: 400+ \n";
+                        //        reply.Attachments = new List<Attachment>();
+
+                        //        break;
+                        //    case "octavia":
+                        //        reply.Text = "Octavia Blake. Okteivia kom Skaikru. A warrior for the Trikru as Indra's second, she is a skilled fighter in hand to hand combat and sword play. \n\n" +
+                        //            "* Age: 17  \n" +
+                        //            "* Living Family: Bellamy Blake \n" +
+                        //            "* Skills: Weapons expert, tracking, culture expert \n" +
+                        //            "* Kills: 5 \n";
+                        //        reply.Attachments = new List<Attachment>();
+
+
+                        //        break;
+                        //    default:
+                        //        reply.Text = ("I have no information about that person. " +
+                        //            "Tell me who you would like to know about. " +
+                        //            "Or if you would like to join the City of Light.");
+
+                        //        break;
+                        // }
 
                     }
                     if (entityItem.Type == "Place")

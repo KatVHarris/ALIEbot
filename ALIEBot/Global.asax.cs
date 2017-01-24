@@ -1,5 +1,4 @@
-﻿using ALIEbot.App_Start;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,9 +11,7 @@ namespace ALIEbot
     {
         protected void Application_Start()
         {
-            DataBuilder.BuildCharacters();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-
         }
     }
 }

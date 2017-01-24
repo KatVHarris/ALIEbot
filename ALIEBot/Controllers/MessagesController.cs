@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Microsoft.Bot.Connector;
-using Microsoft.Bot.Builder.Dialogs;
 using Newtonsoft.Json;
+using Microsoft.Bot.Builder.Dialogs;
 
-namespace ALIEBot
+namespace ALIEbot
 {
     [BotAuthentication]
     public class MessagesController : ApiController
@@ -18,64 +18,50 @@ namespace ALIEBot
         /// POST: api/Messages
         /// Receive a message from a user and reply to it
         /// </summary>
-        public async Task<Message> Post([FromBody]Message message)
+        public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
         {
-            if (message.Type == "Message")
+            if (activity.Type == ActivityTypes.Message)
             {
-                // ConnectorClient botConnector = new BotConnector();
-                // ... use message.CreateReplyMessage() to create a message, or
-                // ... create a new message and set From, To, Text 
-                // await botConnector.Messages.SendMessageAsync(message);
+                await Conversation.SendAsync(activity, () => new LuisDialog());
+                //ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
+                //// calculate something for us to return
+                //int length = (activity.Text ?? string.Empty).Length;
 
-                // Simplest of responses
-                //return message.CreateReplyMessage($"You said:{message.Text}");
-
-                //return await Conversation.SendAsync(message, () => new SimpleDialog());
-                //return await Conversation.SendAsync(message, () => ComplexDialogChain.dialog);
-                return await Conversation.SendAsync(message, () => new LUIS_Integration());
-
+                //// return our reply to the user
+                //Activity reply = activity.CreateReply($"You sent {activity.Text} which was {length} characters");
+                //await connector.Conversations.ReplyToActivityAsync(reply);
             }
             else
             {
-                return HandleSystemMessage(message);
+                HandleSystemMessage(activity);
             }
+            var response = Request.CreateResponse(HttpStatusCode.OK);
+            return response;
         }
 
-        private Message HandleSystemMessage(Message message)
+        private Activity HandleSystemMessage(Activity message)
         {
-            if (message.Type == "Ping")
-            {
-                Message reply = message.CreateReplyMessage();
-                reply.Type = "Ping";
-                return reply;
-            }
-            else if (message.Type == "DeleteUserData")
+            if (message.Type == ActivityTypes.DeleteUserData)
             {
                 // Implement user deletion here
                 // If we handle user deletion, return a real message
             }
-            else if (message.Type == "BotAddedToConversation")
+            else if (message.Type == ActivityTypes.ConversationUpdate)
             {
-                var connector = new ConnectorClient();
-                //ConnectorClient botConnector = new BotConnector();
-                Message hello = new Message();
-                hello.Text = "Bot Added";
-                return hello;
+                // Handle conversation state changes, like members being added and removed
+                // Use Activity.MembersAdded and Activity.MembersRemoved and Activity.Action for info
+                // Not available in all channels
             }
-            else if (message.Type == "BotRemovedFromConversation")
+            else if (message.Type == ActivityTypes.ContactRelationUpdate)
             {
+                // Handle add/remove from contact lists
+                // Activity.From + Activity.Action represent what happened
             }
-            else if (message.Type == "UserAddedToConversation")
+            else if (message.Type == ActivityTypes.Typing)
             {
-                var connector = new ConnectorClient();
-                Message reply =new Message();
-                reply.Text = "User ADDED";
-                return reply;
+                // Handle knowing tha the user is typing
             }
-            else if (message.Type == "UserRemovedFromConversation")
-            {
-            }
-            else if (message.Type == "EndOfConversation")
+            else if (message.Type == ActivityTypes.Ping)
             {
             }
 

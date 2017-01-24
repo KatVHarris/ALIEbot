@@ -1,68 +1,39 @@
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\ALIEBot.dll.config
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\ALIEBot.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\ALIEBot.pdb
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\Microsoft.Bot.Connector.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\Microsoft.Rest.ClientRuntime.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\Microsoft.WindowsAzure.Configuration.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\Newtonsoft.Json.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\System.Net.Http.Formatting.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\System.Web.Http.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\System.Web.Http.WebHost.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\Microsoft.Rest.ClientRuntime.xml
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\Microsoft.WindowsAzure.Configuration.xml
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\Newtonsoft.Json.xml
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\System.Net.Http.Formatting.xml
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\System.Web.Http.xml
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\System.Web.Http.WebHost.xml
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\obj\Debug\ALIEBot.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\obj\Debug\ALIEBot.pdb
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\obj\Debug\ALIEBot.csprojResolveAssemblyReference.cache
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\Autofac.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\Chronic.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\Microsoft.Bot.Builder.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\Newtonsoft.Json.Schema.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\Autofac.xml
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\Microsoft.Bot.Builder.xml
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\Newtonsoft.Json.Schema.xml
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\ar\Microsoft.Bot.Builder.resources.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\en\Microsoft.Bot.Builder.resources.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\es\Microsoft.Bot.Builder.resources.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\fa\Microsoft.Bot.Builder.resources.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\fr\Microsoft.Bot.Builder.resources.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\ja\Microsoft.Bot.Builder.resources.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\ru\Microsoft.Bot.Builder.resources.dll
-c:\users\kat-book\documents\visual studio 2015\Projects\ALIEBot\ALIEBot\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\ALIEBot.dll.config
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\ALIEBot.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\ALIEBot.pdb
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\Autofac.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\Chronic.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\Microsoft.Bot.Builder.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\Microsoft.Bot.Connector.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\Microsoft.Rest.ClientRuntime.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\Microsoft.WindowsAzure.Configuration.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\Newtonsoft.Json.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\Newtonsoft.Json.Schema.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\System.Net.Http.Formatting.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\System.Web.Http.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\System.Web.Http.WebHost.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\Autofac.xml
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\Microsoft.Bot.Builder.xml
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\Microsoft.Rest.ClientRuntime.xml
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\Microsoft.WindowsAzure.Configuration.xml
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\Newtonsoft.Json.xml
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\Newtonsoft.Json.Schema.xml
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\System.Net.Http.Formatting.xml
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\System.Web.Http.xml
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\System.Web.Http.WebHost.xml
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\ar\Microsoft.Bot.Builder.resources.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\en\Microsoft.Bot.Builder.resources.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\es\Microsoft.Bot.Builder.resources.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\fa\Microsoft.Bot.Builder.resources.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\fr\Microsoft.Bot.Builder.resources.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\ja\Microsoft.Bot.Builder.resources.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\ru\Microsoft.Bot.Builder.resources.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\obj\Debug\ALIEBot.csprojResolveAssemblyReference.cache
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\obj\Debug\ALIEBot.dll
-C:\Users\Kats-SurfaceBook\Documents\GitHub\ALIEbot\ALIEBot\obj\Debug\ALIEBot.pdb
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Bot Application1.dll.config
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Bot Application1.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Bot Application1.pdb
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Autofac.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Chronic.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Microsoft.Bot.Builder.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Microsoft.Bot.Connector.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Microsoft.Rest.ClientRuntime.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Microsoft.WindowsAzure.Configuration.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Newtonsoft.Json.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\System.IdentityModel.Tokens.Jwt.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\System.Net.Http.Formatting.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\System.Web.Http.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\System.Web.Http.WebHost.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Autofac.xml
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Microsoft.Bot.Builder.xml
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Microsoft.Bot.Connector.xml
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Microsoft.IdentityModel.Protocol.Extensions.pdb
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Microsoft.Rest.ClientRuntime.xml
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Microsoft.WindowsAzure.Configuration.xml
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\Newtonsoft.Json.xml
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\System.IdentityModel.Tokens.Jwt.pdb
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\System.IdentityModel.Tokens.Jwt.xml
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\System.Net.Http.Formatting.xml
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\System.Web.Http.xml
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\System.Web.Http.WebHost.xml
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\ar\Microsoft.Bot.Builder.resources.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\en\Microsoft.Bot.Builder.resources.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\es\Microsoft.Bot.Builder.resources.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\fa\Microsoft.Bot.Builder.resources.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\fr\Microsoft.Bot.Builder.resources.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\ja\Microsoft.Bot.Builder.resources.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\ru\Microsoft.Bot.Builder.resources.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\obj\Debug\ALIEbot.csprojResolveAssemblyReference.cache
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\obj\Debug\Bot Application1.dll
+c:\users\kats-surfacebook\documents\visual studio 2015\Projects\ALIEbot\ALIEbot\obj\Debug\Bot Application1.pdb

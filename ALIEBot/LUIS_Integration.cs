@@ -136,7 +136,7 @@ namespace ALIEBot
             string message = Greetings[x];
             await context.PostAsync(message);
             context.Wait(MessageReceived);
-        }
+        } 
 
         [LuisIntent("NameQuery")]
         public async Task GetInformationOnX(IDialogContext context, LuisResult result)
@@ -160,13 +160,24 @@ namespace ALIEBot
                                     "* Skills: Genius, Mechanic, Electronics Expert. \n" +
                                     "* Kills: -- \n";
                                 reply.Attachments = new List<Attachment>();
-                                reply.Attachments.Add(new Attachment
+                                List<CardImage> cardImages = new List<CardImage>();
+                                cardImages.Add(new CardImage(url: "http://vignette4.wikia.nocookie.net/thehundred/images/2/2b/RavenS2Promo.png/revision/latest?cb=20160401040926"));
+                                HeroCard plCard = new HeroCard()
                                 {
                                     Title = "Name: Raven Reyes",
-                                    ContentType = "image/jpeg",
-                                    ContentUrl = $"http://vignette4.wikia.nocookie.net/thehundred/images/2/2b/RavenS2Promo.png/revision/latest?cb=20160401040926",
-                                    Text = "It won't survive me"
-                                });
+                                    Subtitle = "It won't survive me",
+                                    Images = cardImages
+
+                                };
+
+                                reply.Attachments.Add(plCard.ToAttachment());
+                                //reply.Attachments.Add(new Attachment
+                                //{
+                                //    Title = "Name: Raven Reyes",
+                                //    ContentType = "image/jpeg",
+                                //    ContentUrl = $"http://vignette4.wikia.nocookie.net/thehundred/images/2/2b/RavenS2Promo.png/revision/latest?cb=20160401040926",
+                                //    Text = "It won't survive me"
+                                //});
                                 break;
                             case "clarke":
                                 reply.Text = "Clarke is strong and determined. Her friends and family are her weakness. She is not as clever as Raven, though she is resourceful. \n\n " +

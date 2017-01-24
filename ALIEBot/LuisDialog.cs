@@ -148,13 +148,6 @@ namespace ALIEbot
                                     "* Skills: Genius, Mechanic, Electronics Expert. \n" +
                                     "* Kills: -- \n";                       
                                 reply.Attachments = new List<Attachment>();
-                                //reply.Attachments.Add(new Attachment
-                                //{
-                                //    Title = "Name: Raven Reyes",
-                                //    ContentType = "image/jpeg",
-                                //    ContentUrl = $"http://vignette4.wikia.nocookie.net/thehundred/images/2/2b/RavenS2Promo.png/revision/latest?cb=20160401040926",
-                                //    Text = "It won't survive me"
-                                //});
                                 List<CardImage> cardImages = new List<CardImage>();
                                 cardImages.Add(new CardImage(url: "http://vignette4.wikia.nocookie.net/thehundred/images/2/2b/RavenS2Promo.png/revision/latest?cb=20160401040926"));
                                 HeroCard plCard = new HeroCard()

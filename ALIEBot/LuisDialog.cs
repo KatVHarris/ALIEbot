@@ -158,7 +158,7 @@ namespace ALIEBot
                             cardImages.Add(new CardImage(url: currentCharacterInfo.ImageLink));
                             HeroCard plCard = new HeroCard()
                             {
-                                Title = "Name: " + currentCharacterInfo.id,
+                                Title = "Name: " + currentCharacterInfo.Name,
                                 Subtitle = currentCharacterInfo.Quote,
                                 Images = cardImages
 

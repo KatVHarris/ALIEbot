@@ -126,6 +126,16 @@ namespace ALIEBot
             context.Wait(MessageReceived);
         }
 
+
+        [LuisIntent("ShowQuery")]
+        public async Task ShowQuery(IDialogContext context, LuisResult result)
+        {
+            string message = "New episodes of The 100 air Wednesdays at 9PM(EST)/8PM(CT), starting Feb 1, on the CW. \n\n" +
+                "You can also watch full episodes here: http://www.cwtv.com/shows/the-100/ \n\n" + "Or catch up with Seasons 1-3 on Netflix.";
+            await context.PostAsync(message);
+            context.Wait(MessageReceived);
+        }
+
         [LuisIntent("LocateX")]
         public async Task LocateX(IDialogContext context, LuisResult result)
         {

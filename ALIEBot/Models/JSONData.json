@@ -197,8 +197,98 @@
         "HouseDescription" : "Abby Griffin sorts into Gryffindor! As leader and healer of her people, she consitantly goes with her gut when making decisions and judging the morality of situation."
       },
       "Group": "Sky People"
-    }        
-   ],
+    },
+                    {
+            "id":"emori",
+      "Name": "Emori",
+      "Description": "A resourcesful theif. Emori had been working for me stealing technology even before she joinedd the City of Light. ",
+      "Age": "Mid 20s",
+      "LivingRelatives": "none",
+      "Kills" : "1",
+      "Skills": "Lock picking, Stealth, Hiding, Charisma",
+      "Quote": "Now that's tech.",
+      "DescriptionLink": "...",
+      "ImageLink": "http://vignette1.wikia.nocookie.net/thehundred/images/7/7f/Emori_3x02.PNG/revision/latest?cb=20160131065228",
+      "Location": "Tondc",
+      "House": {
+        "HouseName": "Unkown",
+        "HouseDescription" : ""
+      },
+      "Group": "Nomad"
+    },
+                        {
+            "id":"lincoln",
+      "Name": "Lincoln",
+      "Description": "Lincoln - One of the strongest warriors of trikru. After helping the 100 and the Arkers save their people from Mount Weather he was cast out of trikru to live with the Sky People.",
+      "Age": "Mid 20s",
+      "LivingRelatives": "none",
+      "Kills" : "Unkown",
+      "Skills": "Fighting, drawing",
+      "Quote": "Mebi oso na hit choda op nodotaim. (May we meet again)",
+      "DescriptionLink": "...",
+      "ImageLink": "http://vignette1.wikia.nocookie.net/thehundred/images/5/52/Stealing_Fire_121.png/revision/latest?cb=20160825224602",
+      "Location": "deaceased",
+      "House": {
+        "HouseName": "Unkown",
+        "HouseDescription" : ""
+      },
+      "Group": "Trikru"
+    },
+                            {
+            "id":"indra",
+      "Name": "Indra",
+      "Description": "Indra - Leader of Trikru, and Commander Lexa's second in command. Indra was one of the few trikru that did not take the chip for the City of Light. ",
+      "Age": "Unknown",
+      "LivingRelatives": "none",
+      "Kills" : "Unkown",
+      "Skills": "Fighting, tactics",
+      "Quote": "Lexa's a great commander because she's ruthless. That's why we'll win this battle. ",
+      "DescriptionLink": "...",
+      "ImageLink": "http://vignette1.wikia.nocookie.net/thehundred/images/2/2c/IndraPolis.jpeg/revision/latest?cb=20160130001114",
+      "Location": "Tondc",
+      "House": {
+        "HouseName": "Unkown",
+        "HouseDescription" : ""
+      },
+      "Group": "Trikru"
+    } ,
+                                {
+            "id":"luna",
+      "Name": "Luna",
+      "Description": "Luna - One of the last remaining Nightbloods, she leads a group of Grounders inhabiting an oil rig. Plans of getting the Flame were almost thwarted had she taken the Flame to become the next commander. ",
+      "Age": "Unknown",
+      "LivingRelatives": "none",
+      "Kills" : "Unkown",
+      "Skills": "Fighting, tactics",
+      "Quote": "I didn't flee the conclave because I was afraid I would lose. I fled, because I knew I would win.",
+      "DescriptionLink": "...",
+      "ImageLink": "http://vignette2.wikia.nocookie.net/thehundred/images/0/02/Luna_Join_or_Die.png/revision/latest?cb=20160429110415",
+      "Location": "Tondc",
+      "House": {
+        "HouseName": "Unkown",
+        "HouseDescription" : ""
+      },
+      "Group": "Boat Clan"
+    },
+                                    {
+            "id":"roan",
+      "Name": "Roan",
+      "Description": "King Roan Azgeda - Became prince of the Ice Nation after Commander Lexa killed the Ice Queen Nia. A fair ruler and ally of Clarke, Roan is a formidable warrior and leader. He did not enter the City of Light. ",
+      "Age": "Unknown",
+      "LivingRelatives": "none",
+      "Kills" : "Unkown",
+      "Skills": "Sword Play, Staff fighting, Archery ",
+      "Quote": "Is that Death I hear stalking me? Or just the Commander of Death?",
+      "DescriptionLink": "...",
+      "ImageLink": "http://vignette1.wikia.nocookie.net/thehundred/images/2/2c/IndraPolis.jpeg/revision/latest?cb=20160130001114",
+      "Location": "Tondc",
+      "House": {
+        "HouseName": "Unkown",
+        "HouseDescription" : ""
+      },
+      "Group": "Azgeda aka Ice Nation"
+    }                       
+],
     "Locations" : [
       {
         "id":"tondc",

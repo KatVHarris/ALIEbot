@@ -62,18 +62,18 @@ namespace ALIEBot.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///   &quot;Characters&quot;: [
+        ///  &quot;Characters&quot;: [
         ///    {
-        ///      &quot;id&quot;:&quot;clarke&quot;,
+        ///      &quot;id&quot;: &quot;clarke&quot;,
         ///      &quot;Name&quot;: &quot;Clarke Griffin&quot;,
         ///      &quot;Description&quot;: &quot;Clarke is strong and determined. Her friends and family are her weakness. She is not as clever as Raven, though she is resourceful.&quot;,
         ///      &quot;Age&quot;: &quot;18&quot;,
         ///      &quot;LivingRelatives&quot;: &quot;Dr. Abigail Griffin&quot;,
-        ///      &quot;Kills&quot; : &quot;1000+&quot;,
+        ///      &quot;Kills&quot;: &quot;1000+&quot;,
         ///      &quot;Skills&quot;: &quot;Negotiation, Medical Knowledge&quot;,
         ///      &quot;Quote&quot;: &quot;I did it for my people.&quot;,
         ///      &quot;DescriptionLink&quot;: &quot;...&quot;,
-        ///      &quot;ImageLink&quot;: &quot;http://vignette3.wikia.nocoo [rest of string was truncated]&quot;;.
+        ///      &quot;ImageLink&quot;: &quot;http://vignette3.wikia.nocook [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string JSONCharacters {
             get {

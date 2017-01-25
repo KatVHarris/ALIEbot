@@ -21,7 +21,7 @@ namespace ALIEBot
         string[] Greetings = new string[]{ "Hello there. Is it not a the perfect time to join the City of Light.",
             "Hello, I'm A.L.I.E. I'm here to help.",
             "Greetings, I am A.L.I.E. the City of Light will take away all your pain.",
-            "Greetings", "Hello", "Hello, how can I help?" };
+            "Greetings, what information do you seek?", "Hello, what would you like to know?", "Hello, how can I help?" };
 
         //Generate Method for every Intent in LUIS model
         [LuisIntent("")]

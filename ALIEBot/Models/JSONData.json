@@ -199,36 +199,42 @@
       "Group": "Sky People"
     }        
    ],
-    "Locations" : {
-        "tondc" : {
+    "Locations" : [
+      {
+        "id":"tondc",
           "Name" : "Tondc aka Tondisi",
         "Description" : "Tondc, formally Washington D.C., the 2052 capital of the United States, was the Tri Kru's largest village; until Mount Weather shot a missle destroying much of the city and killing at least 250 people",
         "ImageLink" : "http://vignette2.wikia.nocookie.net/thehundred/images/a/ad/Tondc_after_missile_2x12.png/revision/latest?cb=20150819003729"
         },
-        "ark" : {
+        {
+          "id": "ark",
           "Name" : "The Ark",
         "Description" : "Created in 2052 the Ark, was formed from 12 national space stations, incuding The International Space Station. Each station had different responisbilites for maintaing order, and life aboard the Ark. After 97 years in space The Ark's oxygen system started to fail; causing the council to send 100 prisioners to earth to see if it was survivable. A majority of the Ark was used to send the remaining population to earth. A portition that was left in space was utilized as the server for the City of Light.",
         "ImageLink" : "http://vignette2.wikia.nocookie.net/thehundred/images/a/a3/Pilot_003.png/revision/latest?cb=20160828123805"
         },
-        "dropship" : {
+        {
+          "id": "dropship",
           "Name" : "Drop Ship",
         "Description" : "Originally part of the Ark, the dropship was used to send the 100 prisoners to Earth. Once landing, the ship became the location for the Delinquints camp.",
         "ImageLink" : "http://vignette3.wikia.nocookie.net/thehundred/images/0/00/The_camp2_1x13.png/revision/latest?cb=20150530012700"
         },
-        "mtweather" : {
+        {
+          "id": "mtweather" ,
           "Name" : "Mount Weather",
         "Description" : "Mount Weather, orginally a military bunker able to easily feed 300 for 2 years, was repurposed to house 400+ people that survived the inital bombing of Earth in 2052. The mountain preserved many pieces of culture from life before 2052. Inorder to survive the mountain created several programs, Harvest, Veil, and Cerberus. To survive radition levels, the mountain's inhabitants would capture grounders and use blood treatments survive, called Harvest program. The veil was an acid fog the mountain could release acting as a barrier against the grounders. The As part of the third layer of protection, Cerberus Program, the Mountain would drug grounders and subject them to torture turning them into Reapers (cannibalistic, savage, warriors) hunting other grounders. After, Clarke radiated the mountin, killing all the inhabitants, the arkers started to use the mountain for medical puroses and house other Arkers from farm station. In retailiation the Ice Nation sent an assassin to enter the Mountains self destruct secquence. The Ice Nation was successful in their attack.",
         "ImageLink" : "http://vignette2.wikia.nocookie.net/thehundred/images/6/63/Reapercussions_018_%28Mount_Weather%29.png/revision/latest?cb=20160911160407"
         },
-        "arkadia" : {
+        {
+          "id" : "arkadia",
           "Name" : "Arkadia",
         "Description" : "Arkadia, formerly known as Camp Jaha, is the home-base of the Sky People. Located an 8 hour trek from Mount Weather. The camp is built around the crashed Alpha Station after it was brought down to Earth along with the other stations of The Ark. Arkadia is called home to the remaining Sky People who came to Earth in Alpha Station, Mecha Station, Factory Station, Farm Station, and the Delinquents' drop ship.",
         "ImageLink" : "http://vignette2.wikia.nocookie.net/thehundred/images/1/1f/Tumblr_neks7xIAqp1rugagyo1_500.gif/revision/latest?cb=20150823052451"
         },
-        "polis" : {
+        {
+          "id" : "polis",
           "Name" : "Polis",
         "Description" : "Capitol for Commander Lexa's Coalition of 12 tribes. With bustling markets and places of worship, Polis is comprised of many grounders living in peace. At the Heart of the city stands The commander's tower, with the Commander's Throne at the highest level, and a singular elevator as the main mode of transportation up the tower. Once Jaha conqured the capital the tower acted as base of operations for the City of Light.",
         "ImageLink" : "http://vignette2.wikia.nocookie.net/thehundred/images/4/4b/Polis.png/revision/latest?cb=20160129170628"
         }
-    }
+    ]
 }

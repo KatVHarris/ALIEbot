@@ -68,7 +68,7 @@ namespace ALIEBot.Properties {
         ///      &quot;Name&quot;: &quot;Clarke Griffin&quot;,
         ///      &quot;Description&quot;: &quot;Clarke is strong and determined. Her friends and family are her weakness. She is not as clever as Raven, though she is resourceful.&quot;,
         ///      &quot;Age&quot;: &quot;18&quot;,
-        ///      &quot;LivingRelatvies&quot;: &quot;Dr. Abigail Griffin&quot;,
+        ///      &quot;LivingRelatives&quot;: &quot;Dr. Abigail Griffin&quot;,
         ///      &quot;Kills&quot; : &quot;1000+&quot;,
         ///      &quot;Skills&quot;: &quot;Negotiation, Medical Knowledge&quot;,
         ///      &quot;Quote&quot;: &quot;I did it for my people.&quot;,
@@ -85,13 +85,13 @@ namespace ALIEBot.Properties {
         ///   Looks up a localized string similar to {
         ///    &quot;Locations&quot; : [
         ///      {
-        ///        &quot;id&quot; : &quot;tondc&quot; ,
+        ///        &quot;id&quot;:&quot;tondc&quot;,
         ///          &quot;Name&quot; : &quot;Tondc aka Tondisi&quot;,
         ///        &quot;Description&quot; : &quot;Tondc, formally Washington D.C., the 2052 capital of the United States, was the Tri Kru&apos;s largest village; until Mount Weather shot a missle destroying much of the city and killing at least 250 people&quot;,
         ///        &quot;ImageLink&quot; : &quot;http://vignette2.wikia.nocookie.net/thehundred/images/a/ad/Tondc_after_missile_2x12.png/revision/latest?cb=20150819003729&quot;
         ///        },
         ///        {
-        ///        &quot;id&quot;  [rest of string was truncated]&quot;;.
+        ///          &quot;id&quot;:  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string JSONLocations {
             get {

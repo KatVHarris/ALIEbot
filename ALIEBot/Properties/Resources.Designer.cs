@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ALIEbot.Properties {
+namespace ALIEBot.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ALIEbot.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ALIEbot.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ALIEBot.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -71,9 +71,9 @@ namespace ALIEbot.Properties {
         ///      &quot;LivingRelatvies&quot;: &quot;Dr. Abigail Griffin&quot;,
         ///      &quot;Kills&quot; : &quot;1000+&quot;,
         ///      &quot;Skills&quot;: &quot;Negotiation, Medical Knowledge&quot;,
-        ///      &quot;Quote&quot;: &quot;Clarke Griffin&quot;,
+        ///      &quot;Quote&quot;: &quot;I did it for my people.&quot;,
         ///      &quot;DescriptionLink&quot;: &quot;...&quot;,
-        ///      &quot;ImageLink&quot;: &quot;http://vignette4.wikia.nocookie.net/t [rest of string was truncated]&quot;;.
+        ///      &quot;ImageLink&quot;: &quot;http://vignette3.wikia.nocoo [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string JSONCharacters {
             get {
@@ -82,11 +82,20 @@ namespace ALIEbot.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to }.
+        ///   Looks up a localized string similar to {
+        ///    &quot;Locations&quot; : [
+        ///      {
+        ///        &quot;id&quot; : &quot;tondc&quot; ,
+        ///          &quot;Name&quot; : &quot;Tondc aka Tondisi&quot;,
+        ///        &quot;Description&quot; : &quot;Tondc, formally Washington D.C., the 2052 capital of the United States, was the Tri Kru&apos;s largest village; until Mount Weather shot a missle destroying much of the city and killing at least 250 people&quot;,
+        ///        &quot;ImageLink&quot; : &quot;http://vignette2.wikia.nocookie.net/thehundred/images/a/ad/Tondc_after_missile_2x12.png/revision/latest?cb=20150819003729&quot;
+        ///        },
+        ///        {
+        ///        &quot;id&quot;  [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string String1 {
+        internal static string JSONLocations {
             get {
-                return ResourceManager.GetString("String1", resourceCulture);
+                return ResourceManager.GetString("JSONLocations", resourceCulture);
             }
         }
     }

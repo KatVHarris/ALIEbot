@@ -1,6 +1,5 @@
-﻿using ALIEbot.Models;
+﻿using ALIEBot.Models;
 using Microsoft.Bot.Builder.Dialogs;
-using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
 using Microsoft.Bot.Connector;
 using System;
@@ -10,12 +9,12 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace ALIEbot
+namespace ALIEBot
 {
     // Connect to LUIS
     // Make Serializable 
     // Extend the LuisDialog<object>
-    [LuisModel("a287f18f-4ae3-4346-b712-2bb9468f81c2", "f2b59c258e5042a3b265498b92acd8a8")]
+    [Microsoft.Bot.Builder.Luis.LuisModel("a287f18f-4ae3-4346-b712-2bb9468f81c2", "f2b59c258e5042a3b265498b92acd8a8")]
     [Serializable]
     public class LUISDialog : LuisDialog<Object>
     {
@@ -140,7 +139,7 @@ namespace ALIEbot
                 {
                     if (entityItem.Type == "Character")
                     {
-                        if(CharacterDictionary.characterDictionary.Count < 3)
+                        if (CharacterDictionary.characterDictionary.Count < 3)
                         {
                             //build dictionary
                             DataBuilder.BuildCharacters();

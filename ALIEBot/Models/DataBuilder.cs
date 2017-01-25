@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Web;
 
-namespace ALIEbot.Models
+namespace ALIEBot.Models
 {
     public class DataBuilder
     {
@@ -15,12 +14,5 @@ namespace ALIEbot.Models
         {
             CharacterDictionary.BuildCharactersFromJSON();
         }
-
-        /*
-        public static async void BuildCharacters()
-        {
-            bool builtDB = await Task.Run(() => CharacterDictionary.BuildCharactersFromJSON());
-        }
-        */
     }
 }

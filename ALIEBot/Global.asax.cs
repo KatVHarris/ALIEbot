@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
 
-namespace ALIEbot
+namespace ALIEBot
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

@@ -1,18 +1,19 @@
-﻿using ALIEbot.Properties;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace ALIEbot.Models
+using ALIEBot.Properties;
+
+namespace ALIEBot.Models
 {
     public static class CharacterDictionary
     {
         public static Dictionary<string, Character> characterDictionary = new Dictionary<string, Character>();
         static CharacterList FullCharacterList;
 
-        
+
         public static void BuildCharactersFromJSON()
         {
             FullCharacterList = new CharacterList();
@@ -20,7 +21,7 @@ namespace ALIEbot.Models
             FullCharacterList = JsonConvert.DeserializeObject<CharacterList>(jsonText);
             AddAllCharacters();
         }
-        
+
         /*
         public static bool BuildCharactersFromJSON()
         {
@@ -39,7 +40,7 @@ namespace ALIEbot.Models
             {
                 characterDictionary.Add(c.id, c);
             }
-           
+
         }
 
         /// <summary>

@@ -1,4 +1,4 @@
-﻿ {
+﻿{
    "Characters": [
     {
       "id":"clarke",
@@ -8,9 +8,9 @@
       "LivingRelatvies": "Dr. Abigail Griffin",
       "Kills" : "1000+",
       "Skills": "Negotiation, Medical Knowledge",
-      "Quote": "Clarke Griffin",
+      "Quote": "I did it for my people.",
       "DescriptionLink": "...",
-      "ImageLink": "http://vignette4.wikia.nocookie.net/thehundred/images/6/68/The-100-season-2-cast-photos-clarke.png/revision/latest?cb=20160401042738",
+      "ImageLink": "http://vignette3.wikia.nocookie.net/thehundred/images/2/24/316_Clarke.png/revision/latest?cb=20160525193549",
       "Location": "Tondc",
       "House": {
         "HouseName": "Gryffindor",
@@ -100,7 +100,7 @@
       "Skills": "Tactics, Weapons expert",
       "Quote": "Whatever the hell we want.",
       "DescriptionLink": "d",
-      "ImageLink": "http://vignette2.wikia.nocookie.net/thehundred/images/5/5f/The-100-season-2-cast-photos-bellamy.png/revision/latest?cb=20160401042453",
+      "ImageLink": "http://vignette2.wikia.nocookie.net/thehundred/images/f/f2/The100_S3_Wanheda_Part_2_Bellamy_7.jpg/revision/latest?cb=20161014204118",
       "Location": "Tondc",
       "House": {
         "HouseName": "Slytherin",
@@ -118,15 +118,87 @@
       "Skills": "Weapons expert, tracking, speaks grouder, cultural knowledge",
       "Quote": "I am not afriad.",
       "DescriptionLink": "d",
-      "ImageLink": "http://vignette2.wikia.nocookie.net/thehundred/images/5/5f/The-100-season-2-cast-photos-bellamy.png/revision/latest?cb=20160401042453",
-      "Location": "d",
+      "ImageLink": "http://vignette3.wikia.nocookie.net/thehundred/images/3/33/Hakeldama_050.png/revision/latest?cb=20160824131357",
+      "Location": "Tondc",
       "House": {
         "HouseName": "Slytherin",
         "HouseDescription" : "Slytherin House - Octavia Blake will do anything for those she loves, and fights to protect what's hers, even if it means sacraficing others."
       },
       "Group": "Skikru"
-    }    
-  ],
+    },
+    {
+            "id":"jasper",
+      "Name": "Jasper Jordan",
+      "Description": "Jasper Jordan, young, reckless, and greif stricken after the radiation of the Mountain. He was instrumental in getting us infromation about Clarke whereabouts and their plans for the Flame.",
+      "Age": "15 or 16",
+      "LivingRelatvies": "none",
+      "Kills" : "302",
+      "Skills": "Chemistry, Sniper",
+      "Quote": "I got this.",
+      "DescriptionLink": "...",
+      "ImageLink": "http://vignette4.wikia.nocookie.net/thehundred/images/1/1d/Join_or_Die_107.png/revision/latest?cb=20160827200138",
+      "Location": "Tondc",
+      "House": {
+        "HouseName": "Hufflepuff",
+        "HouseDescription" : "Jasper sorts into Hufflepuff. Extremely loyal, we see his true colors after the death of the Mountain Men, when protecting their former belongings from the Arkers repurposing."
+      },
+      "Group": "Sky People"
+    },
+        {
+            "id":"monty",
+      "Name": "Monty Green",
+      "Description": "Monty Green, the 100 would not have survived without his knowledge of electronics and agriculture. He is very intellegent and would be an optimal candidate for the City of Light, do not underestimate him.",
+      "Age": "15 or 16",
+      "LivingRelatvies": "none",
+      "Kills" : "About 400",
+      "Skills": "Agriculture, Electornics, Engineering",
+      "Quote": "It's done. You just have to pull this.",
+      "DescriptionLink": "...",
+      "ImageLink": "http://vignette4.wikia.nocookie.net/thehundred/images/1/1d/Join_or_Die_107.png/revision/latest?cb=20160827200138",
+      "Location": "Tondc",
+      "House": {
+        "HouseName": "Ravenclaw",
+        "HouseDescription" : "Ravenclaw! Monty is thoughtful and uses intellegence to guide his actions through the situations on Earth."
+      },
+      "Group": "Sky People"
+    },
+            {
+            "id":"murphy",
+      "Name": "John Murphy",
+      "Description": "John is a clever one. He was one of the first to know the events of 2052 and the true function of the Flame and Chip. He was instrumental in allowing Clarke to harness the power of the Flame.",
+      "Age": "17",
+      "LivingRelatvies": "none",
+      "Kills" : "1",
+      "Skills": "Survival Instincts, Manipulation, Charisma",
+      "Quote": "Pain, hate, envy. Those are the AMCs of me.",
+      "DescriptionLink": "...",
+      "ImageLink": "http://vignette2.wikia.nocookie.net/thehundred/images/c/c9/John_Murphy_Updated.png/revision/latest?cb=20160522174517",
+      "Location": "Tondc",
+      "House": {
+        "HouseName": "Slytherin",
+        "HouseDescription" : "Slytherin through and through. Murphy lives the me and mine mentality."
+      },
+      "Group": "Sky People"
+    },
+                {
+            "id":"abby",
+      "Name": "Dr. Abigail Griffin aka Abby",
+      "Description": "Dr. Griffin is Chief Medical Officer and the former Chancellor when the Arkers first landed. She joined the City of Light to save Raven, and was able to get Kane to take the chip as well. ",
+      "Age": "40",
+      "LivingRelatvies": "none",
+      "Kills" : "1",
+      "Skills": "Medical Expertise",
+      "Quote": "Maybe there are no good guys.",
+      "DescriptionLink": "...",
+      "ImageLink": "http://vignette2.wikia.nocookie.net/thehundred/images/d/dd/Pilot_073.png/revision/latest?cb=20160828123944",
+      "Location": "Tondc",
+      "House": {
+        "HouseName": "Gryffindor",
+        "HouseDescription" : "Abby Griffin sorts into Gryffindor! As leader and healer of her people, she consitantly goes with her gut when making decisions and judging the morality of situation."
+      },
+      "Group": "Sky People"
+    }        
+   ],
     "Locations" : {
         "tondc" : {
           "Name" : "Tondc aka Tondisi",

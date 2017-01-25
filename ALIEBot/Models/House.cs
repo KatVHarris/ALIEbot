@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace ALIEbot.Models
+namespace ALIEBot.Models
 {
     public class House
     {

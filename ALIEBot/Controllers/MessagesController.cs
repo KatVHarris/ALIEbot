@@ -9,7 +9,7 @@ using Microsoft.Bot.Connector;
 using Newtonsoft.Json;
 using Microsoft.Bot.Builder.Dialogs;
 
-namespace ALIEbot
+namespace ALIEBot
 {
     [BotAuthentication]
     public class MessagesController : ApiController

@@ -126,6 +126,48 @@ namespace ALIEBot
             context.Wait(MessageReceived);
         }
 
+        [LuisIntent("LocateX")]
+        public async Task LocateX(IDialogContext context, LuisResult result)
+        {
+            var entitiesArray = result.Entities;
+            var actions = result.Query;
+
+            var reply = context.MakeMessage();
+            if(actions.ToString() == "where is clarke?")
+            {
+                reply.Text = "Clarke's was last located in Tondc.";
+            }
+            if (entitiesArray.Count >= 1)
+            {
+                foreach (var entityItem in result.Entities)
+                {
+                    if (entityItem.Type == "Character")
+                    {
+                        if (LocationDictionary.locationDictionary.Count < 3)
+                        {
+                            DataBuilder.BuildLocations();
+                        }
+                        if (CharacterDictionary.characterDictionary.Count < 3)
+                        {
+                            //build dictionary
+                            DataBuilder.BuildCharacters();
+                        }
+                        if (CharacterDictionary.characterDictionary.ContainsKey(entityItem.Entity))
+                        {
+                            Character currentCharacterInfo = CharacterDictionary.GetCharacter(entityItem.Entity);
+                            reply.Text = currentCharacterInfo.Name + "'s last known location was " +
+                                    currentCharacterInfo.Location;
+                        }
+                    }
+                }
+
+            }
+            await context.PostAsync(reply);
+            context.Wait(MessageReceived);
+        }
+
+        
+
         [LuisIntent("NameQuery")]
         public async Task GetInformationOnX(IDialogContext context, LuisResult result)
         {
@@ -259,9 +301,34 @@ namespace ALIEBot
                         // }
 
                     }
-                    if (entityItem.Type == "Place")
+                    if (entityItem.Type == "Places")
                     {
+                        if (LocationDictionary.locationDictionary.Count < 3)
+                        {
+                            DataBuilder.BuildLocations();
+                        }
+                        if (LocationDictionary.locationDictionary.ContainsKey(entityItem.Entity))
+                        {
+                            Location currentLocationInfo = LocationDictionary.GetLocation(entityItem.Entity);
+                            reply.Text = currentLocationInfo.Description + " \n\n" ;
+                            reply.Attachments = new List<Attachment>();
+                            List<CardImage> cardImages = new List<CardImage>();
+                            cardImages.Add(new CardImage(url: currentLocationInfo.ImageLink));
+                            HeroCard plCard = new HeroCard()
+                            {
+                                Title = "Name: " + currentLocationInfo.Name,
+                                
+                                Images = cardImages
 
+                            };
+                            reply.Attachments.Add(plCard.ToAttachment());
+                        }
+                        else
+                        {
+                            reply.Text = ("I'm sorry, I have no information about that place. " +
+        "Tell me who you would like to know about; " +
+        "or if you would like to join the City of Light.");
+                        }
                     }
 
                 }

@@ -14,5 +14,9 @@ namespace ALIEBot.Models
         {
             CharacterDictionary.BuildCharactersFromJSON();
         }
+        public static void BuildLocations()
+        {
+            LocationDictionary.BuildLocationsFromJSON();
+        }
     }
 }

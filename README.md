@@ -1,27 +1,19 @@
 # ALIEbot
 
 ### Author
-Katherine "Kat" Harris - Microsoft Technical Evangelist (TE) - Twitter: @KatVHarris
-
-### Update - 
-The LUIS API is being update. The code for accessing the LUIS framework will change. Intents will soon be accessed through the Intent[] tag instead of the current LUIS[] tag. Because of the pending changes I will wait for adding anymore LUIS functionality and start integrating LUIS to Unity with a UWP application for Windows 10
-
-## Notes
-Slack integration is working, however the bot responds to ever post in the channel. To avoid this, add alie to a seprate #alie_bot channel to interact. 
-
-Unity integration may byspass certain callbacks in the bot framework since Unity runs on a different version of .Net/Mono. Direct calls to the LUIS framework will have to be integrated through a Node.js server. Elements to work on this part will happen this week - 06/27/16
+Katherine "Kat" Harris - Microsoft Technical Evangelist (TE) - Twitter: @KatVHarris - http://twitter.com/katvharris
 
 ## Interact and Test
 Web: http://aliebot.azurewebsites.net/
 
-Facebook: Link no longer working
+Facebook: https://www.facebook.com/ALIE-Bot-1179365098748917/
 
 ## Summary
 ALIEbot was created using the Microsoft Bot Framework. It uses the Bot Connector (C#) for integration to the Web, Facebook and Slack. Each class has a different sample of how to implement messaging for your Bot. The Natural Language processing is done through Microsoft's LUIS Serivce: https://www.luis.ai/
 
 The purpose of this project is to have detailed samples for people to learn about the Bot Framework. And eventually expand the demo into the 3D gaming engine, Unity3D. 
 
-The post for how I got everything working will be up at: http://katvharris.azurewebsites.net/blog/microsoft-bot-framework/
+The post for how I got everything working will be up at: http://katvharris.azurewebsites.net/blog/
 
 ## Commands // Responses // LUIS intents
 #### None
@@ -48,13 +40,26 @@ Current Character Attachment Cards
 * Kane
 * Jaha
 * Bellamy
+* Murphy
 * Octavia
+* Indra
+* Roan
+* Emori
+
+* Tondc
+* Polis
+* The Ark
+* Arkadia
+* Mount Weather
 
 #### Greeting
 Responds to users greeting with generic greetings.
 
 #### Upgrade
 Gives the user acess to all the hidden commands for querying data about the show instead of just elements inside the show. The user needs to know the command phrase "ascende superius" to upgrade. "Help" Command will also reveal list of hidden commands. 
+
+#### LocateX
+Gives the last known location of a character.
 
 #### Sort Character
 This command can only be used after upgrading. It tells users which house each character belongs to with attachement card of the house and a descrioption of why they are in that house. 
@@ -83,10 +88,16 @@ The format for adding Character Cards is as follows:
 Syntax for reply.Text should follow the Microsoft Bot Frameowrk Markdown text. 
 Examples of the text for Facebook and the Web are here: http://bit.ly/botMarkdown
 
+
+## Notes
+With the new updates to the Bot Framework, I refactored all the code to reflect V3. Now interations are handled by Activites and the Web and Facebook interfaces are handled by the updated connection client. 01/24/17
+
+Slack integration is working, however the bot responds to ever post in the channel. To avoid this, add alie to a seprate #alie_bot channel to interact. 
+
+Unity integration may byspass certain callbacks in the bot framework since Unity runs on a different version of .Net/Mono. Direct calls to the LUIS framework will have to be integrated through a Node.js server. Elements to work on this part will happen this week - 06/27/16
+
 ## Coming Features:
-* Get Facebook link back up and working
 * Asking about the creator (Becca and Kat)
-* Asking Character Current Location
 * Returning Links relevant to the show
 
 

@@ -40,11 +40,15 @@ Current Character Attachment Cards
 * Kane
 * Jaha
 * Bellamy
+* Jasper
+* Monty
 * Murphy
 * Octavia
 * Indra
 * Roan
 * Emori
+
+PLACES
 
 * Tondc
 * Polis
